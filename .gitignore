@@ -1,7 +1,23 @@
+# Secrets — NEVER commit
 .env
 .env.*
 !.env.example
-__pycache__/
-*.pyc
+
+# Python virtual environments & caches
 .venv/
 venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local Apify & E2E run artifacts
+storage/
+apify_storage/
+local_test_input.json
+*.zip
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

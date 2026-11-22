@@ -1,0 +1,25 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Complaint-to-Revenue Agent Output",
+  "description": "Qualified competitor complaints with verified capability proof, ban-safe outreach drafts, and an interactive HTML Executive Brief.",
+  "properties": {
+    "actionableLeads": {
+      "type": "string",
+      "title": "Actionable Leads & Outreach Table",
+      "description": "CRM- and spreadsheet-ready leads ordered by Winability Score with Draft A (Public Reply), Draft B (Direct Pitch), and anti-ban rules.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=actionable_leads"
+    },
+    "executiveReport": {
+      "type": "string",
+      "title": "Interactive Executive Dashboard (REPORT.html)",
+      "description": "Self-contained HTML brief with competitor pain breakdown chart and one-click Copy Draft A/B buttons.",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/REPORT.html"
+    },
+    "runSummary": {
+      "type": "string",
+      "title": "Pipeline Funnel Summary (STATUS)",
+      "description": "Stage-by-stage counts (harvested, filtered free, scored, drafted, rejected noise).",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/STATUS"
+    }
+  }
+}

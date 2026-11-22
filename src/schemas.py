@@ -373,20 +373,49 @@ class LLMBatchDraftResponse(BaseModel):
     drafts: list[LLMLeadDraft] = Field(default_factory=list)
 
 
+# class DatasetLeadRecord(BaseModel):
+#     """Flat camelCase record pushed to Apify Dataset (maps 1:1 to .actor/dataset_schema.json)."""
+
+#     recordType: RecordType
+#     winabilityScore: int = Field(default=0, ge=0, le=100)
+#     solvabilityScore: int = Field(default=0, ge=0, le=50)
+#     urgencyScore: int = Field(default=0, ge=0, le=30)
+#     recencyScore: int = Field(default=0, ge=0, le=20)
+#     source: SourceType
+#     subSource: str
+#     authorHandle: str
+#     competitorMentioned: str
+#     painCategory: str
+#     painSummary: str
+#     matchedCapabilities: list[str] = Field(default_factory=list)
+#     claimEvidenceSummary: str = ""
+#     platformSafetyRule: str = ""
+#     draftPublicReply: str = ""
+#     draftDirectPitch: str = ""
+#     gapOrRejectionReason: str = ""
+#     postTitle: str = ""
+#     postUrl: str
+#     publishedAt: str | None = None
+#     draftProvider: str = ""
+
 class DatasetLeadRecord(BaseModel):
     """Flat camelCase record pushed to Apify Dataset (maps 1:1 to .actor/dataset_schema.json)."""
 
+    priorityTier: str = "Hot Lead"
     recordType: RecordType
     winabilityScore: int = Field(default=0, ge=0, le=100)
     solvabilityScore: int = Field(default=0, ge=0, le=50)
     urgencyScore: int = Field(default=0, ge=0, le=30)
     recencyScore: int = Field(default=0, ge=0, le=20)
+    recommendedAction: str = ""
+    outreachStatus: str = "Pending Review"
     source: SourceType
     subSource: str
     authorHandle: str
     competitorMentioned: str
     painCategory: str
     painSummary: str
+    verifiedProof: str = ""
     matchedCapabilities: list[str] = Field(default_factory=list)
     claimEvidenceSummary: str = ""
     platformSafetyRule: str = ""
@@ -395,9 +424,10 @@ class DatasetLeadRecord(BaseModel):
     gapOrRejectionReason: str = ""
     postTitle: str = ""
     postUrl: str
+    publishedDate: str = "Within lookback window"
     publishedAt: str | None = None
+    reportUrl: str = ""
     draftProvider: str = ""
-
 
 class Stage5Result(BaseModel):
     """Final output summary produced by Stage 5."""

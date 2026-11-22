@@ -1,0 +1,291 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "priorityTier": {
+        "type": "string",
+        "title": "Priority Tier",
+        "description": "Human-friendly lead priority (Hot Lead, Top Opportunity, Warm / SEO Signal, Market Gap).",
+        "example": "Hot Lead"
+      },
+      "recordType": {
+        "type": "string",
+        "title": "Record Type",
+        "enum": ["hot_lead", "warm_signal", "unresolved_market_gap"],
+        "description": "Machine-readable bucket for filtering in API/n8n/Zapier automations.",
+        "example": "hot_lead"
+      },
+      "winabilityScore": {
+        "type": "integer",
+        "title": "Winability Score (0-100)",
+        "description": "Total score = Solvability (0-50) + Urgency (0-30) + Recency (0-20).",
+        "example": 81
+      },
+      "solvabilityScore": {
+        "type": "integer",
+        "title": "Solvability Score (0-50)",
+        "description": "How directly your Verified Capabilities Ledger resolves the complaint.",
+        "example": 45
+      },
+      "urgencyScore": {
+        "type": "integer",
+        "title": "Urgency Score (0-30)",
+        "description": "Switching/buying urgency expressed by the author.",
+        "example": 26
+      },
+      "recencyScore": {
+        "type": "integer",
+        "title": "Recency Score (0-20)",
+        "description": "Deterministic freshness score based on post age.",
+        "example": 20
+      },
+      "recommendedAction": {
+        "type": "string",
+        "title": "Recommended Next Step",
+        "description": "Exact action the founder should take with this row.",
+        "example": "Reply publicly with Draft A (follow anti-ban rule)"
+      },
+      "outreachStatus": {
+        "type": "string",
+        "title": "Outreach Status",
+        "description": "Workflow tracker column pre-filled for Google Sheets, Excel, Notion, or CRM imports.",
+        "example": "Pending Review"
+      },
+      "source": {
+        "type": "string",
+        "title": "Platform",
+        "description": "Source channel (reddit, hacker_news, google_serp, bluesky, g2).",
+        "example": "reddit"
+      },
+      "subSource": {
+        "type": "string",
+        "title": "Community / Site",
+        "description": "Exact subreddit, forum, or review domain (e.g., r/AZURE, Hacker News, capterra.com).",
+        "example": "r/AZURE"
+      },
+      "authorHandle": {
+        "type": "string",
+        "title": "Author Handle",
+        "description": "Public username or 'Public Web Post' when sourced via search snippet.",
+        "example": "u/quantumflux_2789"
+      },
+      "competitorMentioned": {
+        "type": "string",
+        "title": "Competitor",
+        "description": "Competitor product mentioned in the complaint.",
+        "example": "Microsoft Azure"
+      },
+      "painCategory": {
+        "type": "string",
+        "title": "Pain Theme",
+        "description": "Normalized complaint theme for aggregation and content strategy.",
+        "example": "support_frustration"
+      },
+      "painSummary": {
+        "type": "string",
+        "title": "Customer Pain Summary",
+        "description": "Concise 1-sentence summary of the user's stated frustration or requirement.",
+        "example": "User is looking for alternatives to Microsoft Azure support."
+      },
+      "verifiedProof": {
+        "type": "string",
+        "title": "Verified Capabilities (Flat Text)",
+        "description": "Single-column formatted list of exact Verified Capabilities for clean CSV/Excel exports.",
+        "example": "Pay-as-you-go pricing | Managed PostgreSQL"
+      },
+      "matchedCapabilities": {
+        "type": "array",
+        "title": "Matched Capabilities (Array)",
+        "items": { "type": "string" },
+        "description": "Structured array of verified capabilities for API/webhook workflows.",
+        "example": ["Pay-as-you-go pricing"]
+      },
+      "claimEvidenceSummary": {
+        "type": "string",
+        "title": "Claim Grounding Evidence",
+        "description": "Summary of exact factual capabilities backing the score and outreach drafts.",
+        "example": "Grounded in: Pay-as-you-go pricing; Global infrastructure"
+      },
+      "draftPublicReply": {
+        "type": "string",
+        "title": "Draft A (Public Reply)",
+        "description": "Value-first, transparent, anti-ban public reply ready to review and post.",
+        "example": "Before migrating, check if adjusting your current support tier..."
+      },
+      "draftDirectPitch": {
+        "type": "string",
+        "title": "Draft B (Direct / DM Follow-Up)",
+        "description": "Concise direct message follow-up if the author asks for details.",
+        "example": "Saw your post about Azure support costs..."
+      },
+      "platformSafetyRule": {
+        "type": "string",
+        "title": "Anti-Ban & Privacy Guidance",
+        "description": "Platform-specific moderation and GDPR compliance guidance.",
+        "example": "Reddit (r/AZURE): Lead with helpful advice, disclose affiliation clearly."
+      },
+      "postTitle": {
+        "type": "string",
+        "title": "Original Post Title",
+        "description": "Headline of the thread or review.",
+        "example": "Are any alternatives to Microsoft Azure support really worth it?"
+      },
+      "postUrl": {
+        "type": "string",
+        "title": "Original Post URL",
+        "description": "Direct link to the public post.",
+        "example": "https://www.reddit.com/r/AZURE/comments/1xswcwe/example/"
+      },
+      "publishedDate": {
+        "type": "string",
+        "title": "Published Date",
+        "description": "Readable date string (YYYY-MM-DD or 'Within lookback window').",
+        "example": "2026-11-21"
+      },
+      "publishedAt": {
+        "type": ["string", "null"],
+        "title": "Published Timestamp (ISO)",
+        "description": "Exact UTC ISO-8601 timestamp when available.",
+        "example": "2026-11-21T11:37:27+00:00"
+      },
+      "reportUrl": {
+        "type": "string",
+        "title": "Executive Dashboard URL",
+        "description": "Direct link to the run's interactive REPORT.html dashboard.",
+        "example": "https://api.apify.com/v2/key-value-stores/storeId/records/REPORT.html"
+      }
+    },
+    "required": [
+      "priorityTier",
+      "recordType",
+      "winabilityScore",
+      "source",
+      "subSource",
+      "competitorMentioned",
+      "painSummary",
+      "postUrl"
+    ],
+    "additionalProperties": true
+  },
+  "views": {
+    "actionable_leads": {
+      "title": "Actionable Outreach & CRM Export",
+      "description": "Clean spreadsheet-ready table with zero split array columns. Export directly to CSV, Excel, Google Sheets, or Notion.",
+      "transformation": {
+        "fields": [
+          "priorityTier",
+          "winabilityScore",
+          "recommendedAction",
+          "competitorMentioned",
+          "subSource",
+          "painSummary",
+          "verifiedProof",
+          "draftPublicReply",
+          "draftDirectPitch",
+          "platformSafetyRule",
+          "postUrl",
+          "publishedDate",
+          "outreachStatus"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "priorityTier": { "label": "Priority", "format": "text" },
+          "winabilityScore": { "label": "Score /100", "format": "number" },
+          "recommendedAction": { "label": "Next Step", "format": "text" },
+          "competitorMentioned": { "label": "Competitor", "format": "text" },
+          "subSource": { "label": "Community", "format": "text" },
+          "painSummary": { "label": "Customer Pain", "format": "text" },
+          "verifiedProof": { "label": "Verified Proof", "format": "text" },
+          "draftPublicReply": { "label": "Draft A (Public Reply)", "format": "text" },
+          "draftDirectPitch": { "label": "Draft B (Direct / DM)", "format": "text" },
+          "platformSafetyRule": { "label": "Anti-Ban Rule", "format": "text" },
+          "postUrl": { "label": "Post Link", "format": "link" },
+          "publishedDate": { "label": "Date", "format": "text" },
+          "outreachStatus": { "label": "Status", "format": "text" }
+        }
+      }
+    },
+    "content_and_seo_insights": {
+      "title": "Competitor Pain & SEO Insights",
+      "description": "Score breakdown and pain categories for homepage messaging, SEO comparison pages, and product roadmap planning.",
+      "transformation": {
+        "fields": [
+          "priorityTier",
+          "winabilityScore",
+          "solvabilityScore",
+          "urgencyScore",
+          "recencyScore",
+          "competitorMentioned",
+          "painCategory",
+          "painSummary",
+          "claimEvidenceSummary",
+          "postTitle",
+          "postUrl",
+          "publishedDate"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "priorityTier": { "label": "Tier", "format": "text" },
+          "winabilityScore": { "label": "Total /100", "format": "number" },
+          "solvabilityScore": { "label": "Solvability /50", "format": "number" },
+          "urgencyScore": { "label": "Urgency /30", "format": "number" },
+          "recencyScore": { "label": "Recency /20", "format": "number" },
+          "competitorMentioned": { "label": "Competitor", "format": "text" },
+          "painCategory": { "label": "Pain Theme", "format": "text" },
+          "painSummary": { "label": "Summary", "format": "text" },
+          "claimEvidenceSummary": { "label": "Grounding Proof", "format": "text" },
+          "postTitle": { "label": "Original Title", "format": "text" },
+          "postUrl": { "label": "Post Link", "format": "link" },
+          "publishedDate": { "label": "Date", "format": "text" }
+        }
+      }
+    },
+    "automation_api_full": {
+      "title": "Full JSON / Automation View",
+      "description": "Complete structured schema including arrays and metadata for API, MCP, n8n, Make, and Zapier integrations.",
+      "transformation": {
+        "fields": [
+          "recordType",
+          "winabilityScore",
+          "source",
+          "subSource",
+          "authorHandle",
+          "competitorMentioned",
+          "painCategory",
+          "painSummary",
+          "matchedCapabilities",
+          "draftPublicReply",
+          "draftDirectPitch",
+          "postUrl",
+          "publishedAt",
+          "reportUrl"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "recordType": { "label": "Type", "format": "text" },
+          "winabilityScore": { "label": "Score", "format": "number" },
+          "source": { "label": "Source", "format": "text" },
+          "subSource": { "label": "Community", "format": "text" },
+          "authorHandle": { "label": "Author", "format": "text" },
+          "competitorMentioned": { "label": "Competitor", "format": "text" },
+          "painCategory": { "label": "Theme", "format": "text" },
+          "painSummary": { "label": "Pain", "format": "text" },
+          "matchedCapabilities": { "label": "Capabilities Array", "format": "array" },
+          "draftPublicReply": { "label": "Draft A", "format": "text" },
+          "draftDirectPitch": { "label": "Draft B", "format": "text" },
+          "postUrl": { "label": "URL", "format": "link" },
+          "publishedAt": { "label": "ISO Timestamp", "format": "date" },
+          "reportUrl": { "label": "HTML Report", "format": "link" }
+        }
+      }
+    }
+  }
+}

@@ -1,12 +1,19 @@
 {
   "actorSpecification": 1,
-  "name": "complaint-to-revenue-agent",
-  "title": "Complaint-to-Revenue Agent (Product-Agnostic)",
-  "description": "Self-adapting 5-stage agentic pipeline that profiles any product, harvests fresh competitor complaints, verifies factual solvability, and drafts ban-safe outreach.",
-  "version": "0.1",
+  "name": "leadbridge",
+  "title": "LeadBridge",
+  "description": "Turn live competitor complaints across Reddit, Hacker News, Bluesky, Google, and G2 into verified, ban-safe outreach drafts and an interactive Executive Brief for any product.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "defaultMemoryMbytes": 512,
   "meta": {
     "templateId": "python-start"
   },
+  "readme": "../README.md",
   "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
   "dockerfile": "../Dockerfile"
 }
