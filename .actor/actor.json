@@ -1,0 +1,12 @@
+{
+  "actorSpecification": 1,
+  "name": "complaint-to-revenue-agent",
+  "title": "Complaint-to-Revenue Agent (Product-Agnostic)",
+  "description": "Self-adapting 5-stage agentic pipeline that profiles any product, harvests fresh competitor complaints, verifies factual solvability, and drafts ban-safe outreach.",
+  "version": "0.1",
+  "meta": {
+    "templateId": "python-start"
+  },
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile"
+}

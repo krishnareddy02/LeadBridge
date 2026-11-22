@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complaint-to-Revenue Executive Brief &mdash; Atlassian</title>
+  <style>
+    :root {
+      --bg: #f8f7f4;
+      --surface: #ffffff;
+      --ink: #1e1b2e;
+      --muted: #5c586e;
+      --border: #e6e2ee;
+      --purple: #3b1d6c;
+      --teal: #0f766e;
+      --teal-soft: #e6f6f4;
+      --coral: #e05a47;
+      --coral-soft: #fdecea;
+      --amber: #b45309;
+      --amber-soft: #fef3c7;
+      --purple-soft: #efe9fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 28px 20px 56px; }
+    .hero {
+      background: linear-gradient(135deg, var(--purple) 0%, #241046 100%);
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+    .hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+    .hero h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: -0.02em; }
+    .hero p { margin: 0; color: rgba(255,255,255,0.82); font-size: 14px; }
+    .badge-live {
+      background: rgba(15, 118, 110, 0.25);
+      border: 1px solid rgba(94, 234, 212, 0.45);
+      color: #99f6e4;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .kpi {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .kpi-num { font-size: 28px; font-weight: 800; color: var(--purple); line-height: 1.1; }
+    .kpi-num.teal { color: var(--teal); }
+    .kpi-num.coral { color: var(--coral); }
+    .kpi-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-top: 4px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(30, 27, 46, 0.04);
+    }
+    h2 { font-size: 19px; margin: 28px 0 12px; color: var(--purple); }
+    .sub-h { font-size: 14px; margin: 0 0 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+    .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; }
+    .bar-label { width: 150px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bar-track { flex: 1; height: 10px; background: #eeeaf5; border-radius: 999px; overflow: hidden; }
+    .bar-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--purple)); border-radius: 999px; }
+    .bar-val { width: 24px; text-align: right; font-weight: 700; color: var(--purple); }
+    .pill-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .pill-teal { background: var(--teal-soft); color: var(--teal); }
+    .pill-coral { background: var(--coral-soft); color: var(--coral); }
+    .pill-amber { background: var(--amber-soft); color: var(--amber); }
+    .pill-purple { background: var(--purple-soft); color: var(--purple); }
+    .pill-neutral { background: #f1eff6; color: var(--ink); }
+    .lead-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
+    .lead-meta { display: flex; align-items: center; gap: 14px; }
+    .score-badge {
+      background: var(--purple);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      padding: 8px 12px;
+      border-radius: 10px;
+      min-width: 78px;
+      text-align: center;
+    }
+    .score-badge span { font-size: 12px; font-weight: 500; opacity: 0.78; }
+    .lead-title { font-size: 16px; font-weight: 700; color: var(--ink); }
+    .lead-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .btn-link {
+      text-decoration: none;
+      background: var(--purple-soft);
+      color: var(--purple);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 7px 13px;
+      border-radius: 8px;
+    }
+    .btn-link:hover { background: #e3d7f7; }
+    .pain-summary { margin: 10px 0 14px; font-size: 14px; }
+    .section-mini { margin-bottom: 14px; }
+    .mini-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 700; margin-bottom: 6px; }
+    .safety-box {
+      background: var(--amber-soft);
+      border-left: 4px solid var(--amber);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #78350f;
+      margin-bottom: 16px;
+    }
+    .drafts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+    .draft-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fbfafc;
+      padding: 12px 14px;
+    }
+    .draft-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; gap: 8px; }
+    .draft-label { font-size: 12px; font-weight: 700; color: var(--purple); }
+    .copy-btn {
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 11px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .copy-btn:hover { background: #0c5f59; }
+    .draft-text {
+      margin: 0;
+      white-space: pre-wrap;
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--ink);
+    }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: #f4f1fa; color: var(--purple); font-size: 12px; text-transform: uppercase; }
+    details summary { cursor: pointer; font-weight: 700; color: var(--purple); }
+    .ledger-list { margin: 10px 0 0; padding-left: 20px; font-size: 13px; color: var(--muted); }
+    .muted { color: var(--muted); font-size: 13px; }
+    .footer {
+      margin-top: 32px;
+      padding: 16px 20px;
+      border-radius: 10px;
+      background: #f1eff6;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="hero-top">
+        <div>
+          <h1>Atlassian &mdash; Competitor Churn &amp; Outreach Brief</h1>
+          <p>Enterprise Collaboration and Project Management Suite &middot; Lookback: 14 days &middot; Min Hot Score: 70/100 &middot; Generated 2026-11-22 05:06 UTC</p>
+        </div>
+        <span class="badge-live">Human-in-the-Loop Safe</span>
+      </div>
+    </header>
+
+    <section class="kpi-grid">
+      <div class="kpi"><div class="kpi-num">103</div><div class="kpi-label">Harvested (Stage 2)</div></div>
+      <div class="kpi"><div class="kpi-num">5</div><div class="kpi-label">Filtered Free (Stage 3)</div></div>
+      <div class="kpi"><div class="kpi-num teal">5</div><div class="kpi-label">Hot Leads Drafted</div></div>
+      <div class="kpi"><div class="kpi-num">6</div><div class="kpi-label">Warm / SEO Signals</div></div>
+      <div class="kpi"><div class="kpi-num coral">85</div><div class="kpi-label">Noise Rejected ($0)</div></div>
+    </section>
+
+    <section class="card">
+      <div class="mini-label">Source Harvest Telemetry</div>
+      <div class="pill-wrap" style="margin-bottom: 16px;"><span class="pill pill-neutral">hacker_news: <strong>28</strong> (ok)</span><span class="pill pill-neutral">bluesky: <strong>10</strong> (partial)</span><span class="pill pill-neutral">google_serp: <strong>24</strong> (ok)</span><span class="pill pill-neutral">reddit: <strong>42</strong> (ok)</span></div>
+      
+    <div class="grid-2">
+      <div>
+        <h3 class="sub-h">Complaints by Competitor</h3>
+        
+            <div class="bar-row">
+              <div class="bar-label">GitHub</div>
+              <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+              <div class="bar-val">6</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">monday.com</div>
+              <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+              <div class="bar-val">3</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Asana</div>
+              <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+              <div class="bar-val">3</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Google</div>
+              <div class="bar-track"><div class="bar-fill" style="width:16%"></div></div>
+              <div class="bar-val">1</div>
+            </div>
+            
+      </div>
+      <div>
+        <h3 class="sub-h">Top Pain Themes</h3>
+        <div class="pill-wrap"><span class="pill pill-amber">Reliability Outage <strong>(3)</strong></span><span class="pill pill-amber">Pricing Jump <strong>(2)</strong></span><span class="pill pill-amber">Collaboration Tracking <strong>(1)</strong></span><span class="pill pill-amber">Support Slowdown <strong>(1)</strong></span><span class="pill pill-amber">Seeking Alternative <strong>(1)</strong></span><span class="pill pill-amber">Performance Issues <strong>(1)</strong></span></div>
+      </div>
+    </div>
+    
+    </section>
+
+    <h2>Actionable Hot Leads (5)</h2>
+    
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">85<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#1 &middot; Google &mdash; Collaboration Tracking</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/buildinpublic) &middot;
+                      u/Collabsphere &middot;
+                      Solvability 45/50 &middot; Urgency 20/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/buildinpublic/comments/1y26hx1/ai_agents_lie_about_tasks_being_done_surviving/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> Frustrated with disorganized workflows (WhatsApp chats, outdated Google Docs) and lack of verifiable task completion among team members.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Jira for project management, issue tracking, and agile Scrum and Kanban boards</span><span class="pill pill-teal">&#10003; Confluence for documentation and knowledge management</span><span class="pill pill-teal">&#10003; Teamwork Graph connecting knowledge, people, decisions, and relationships</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/buildinpublic): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-1', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-1" class="draft-text">To solve the visibility gap, you might consider centralizing your workflow into a structured issue tracking system rather than relying on disparate docs. This forces a clear audit trail for every task completion. Full disclosure: I work on Atlassian, where we use Jira for issue tracking and Confluence for documentation to map these tasks via our Teamwork Graph, which helps connect people, decisions, and actual work progress.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-1', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-1" class="draft-text">Since you are struggling with task accountability, we could walk through how Jira&#x27;s issue tracking and the Teamwork Graph can map your project dependencies. This would provide the verifiable audit trail you need to see exactly who is completing which task. Let me know if you&#x27;d like a quick walkthrough on setting up a board that enforces this level of transparency.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">76<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#2 &middot; monday.com &mdash; Support Slowdown</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (capterra.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 18/30 &middot; Recency 13/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.capterra.com/p/147657/monday-com/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User mentions slow support response times and issues failing to resolve quickly in monday AI Workspace.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Jira Service Management for IT service management and customer support</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Review Site (G2/Trustpilot/Capterra): Do not scrape or cold-DM private contact info (GDPR/privacy compliance). Use for public positioning or compliant vendor replies.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-2', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-2" class="draft-text">When support response times become a bottleneck, it is often helpful to shift toward a dedicated ITSM platform that prioritizes ticket routing and SLA management. Full disclosure: I work on Atlassian, and we offer Jira Service Management specifically for IT service management and customer support to help teams resolve issues more predictably.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-2', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-2" class="draft-text">I noticed you mentioned frustration with support response times. Jira Service Management is designed to handle those specific bottlenecks with structured ticket routing and service management features. I would be happy to show you how it compares to your current setup if you are looking for a more responsive alternative.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">75<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#3 &middot; GitHub &mdash; Seeking Alternative</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 40/50 &middot; Urgency 22/30 &middot; Recency 13/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/selfhosted/comments/1xxtro7/selfhosting_git_with_forgejo_while_benefiting/video/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is exploring alternatives for self-hosting Git instead of GitHub.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Bitbucket for Git repository hosting and code collaboration</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-3', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-3" class="draft-text">Self-hosting Git is a significant undertaking that requires robust infrastructure for code collaboration. If you are looking for a managed alternative that handles the heavy lifting, it is worth looking at Bitbucket. Full disclosure: I work on Atlassian, and we provide Bitbucket for Git repository hosting and code collaboration.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-3', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-3" class="draft-text">If you are still evaluating self-hosted Git options, I can share some technical details on how Bitbucket handles repository hosting and code collaboration at scale. It might save you the overhead of maintaining your own infrastructure. Let me know if you&#x27;d like to discuss how it fits into your current stack.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">74<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#4 &middot; monday.com &mdash; Performance Issues</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (capterra.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 20/30 &middot; Recency 9/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.capterra.com/p/10023357/monday-service/reviews/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> Reviewers complain about issues, slow performance, and customer support challenges on monday.com.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Jira for project management, issue tracking, and agile Scrum and Kanban boards</span><span class="pill pill-teal">&#10003; Jira Service Management for IT service management and customer support</span><span class="pill pill-teal">&#10003; Trello for visual project management</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Review Site (G2/Trustpilot/Capterra): Do not scrape or cold-DM private contact info (GDPR/privacy compliance). Use for public positioning or compliant vendor replies.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-4', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-4" class="draft-text">Performance and support reliability are critical when scaling operations. For teams needing more robust tracking, many transition to dedicated project management or service management tools. Full disclosure: I work on Atlassian, where we provide Jira for project management and issue tracking, Trello for visual project management, and Jira Service Management for IT service management.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-4', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-4" class="draft-text">Since you have experienced performance and support challenges, I can provide a comparison of how Jira and Trello handle project tracking and service management. We focus on stability and support responsiveness for teams at scale. Would you like to see how these tools might resolve your current performance bottlenecks?</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">72<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#5 &middot; Asana &mdash; Tool Evaluation</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/github) &middot;
+                      u/funcyChaos &middot;
+                      Solvability 45/50 &middot; Urgency 18/30 &middot; Recency 9/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/github/comments/1xui6ow/github_projects_vs_asana/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User debating between GitHub Projects and Asana for organizing a community project.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Jira for project management, issue tracking, and agile Scrum and Kanban boards</span><span class="pill pill-teal">&#10003; Trello for visual project management</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/github): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-5', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-5" class="draft-text">Using issue trackers for non-code tasks is a great way to keep everything in one place, but it requires a tool that scales well with project complexity. Full disclosure: I work on Atlassian, and we offer Jira for agile Scrum and Kanban boards, as well as Trello for more visual project management, both of which are frequently used to manage community projects beyond just code.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-5', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-5" class="draft-text">It sounds like you need a bridge between your technical issues and your broader event planning. Jira&#x27;s Scrum and Kanban boards are built to handle exactly that kind of cross-functional work. I can show you how to structure your boards to keep your events and website tasks organized alongside your code. Would you like a quick look at how that setup works?</pre>
+                </div>
+              </div>
+            </article>
+            
+
+    <h2>Warm / SEO Market Signals (6)</h2>
+    <section class="card"><div class="table-wrap"><table><thead><tr><th>Score</th><th>Source</th><th>Competitor</th><th>Pain / Signal</th><th>Link</th></tr></thead><tbody>
+            <tr>
+              <td><span class="pill pill-purple">68/100</span></td>
+              <td>google_serp / reddit.com</td>
+              <td><strong>GitHub</strong></td>
+              <td>User reporting that GitHub Reviews code diff comment jumping is broken.</td>
+              <td><a href="https://www.reddit.com/r/github/comments/1xxone9/github_reviews_jump_to_the_comment_in_the_diff_is/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">65/100</span></td>
+              <td>google_serp / reddit.com</td>
+              <td><strong>GitHub</strong></td>
+              <td>User is asking about a simple way to add and manage GitHub issues within another tool context.</td>
+              <td><a href="https://www.reddit.com/r/superProductivity/comments/1xtavsc/is_there_a_simple_way_to_add_github_issues/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">65/100</span></td>
+              <td>google_serp / reddit.com</td>
+              <td><strong>GitHub</strong></td>
+              <td>User is complaining about GitHub CI/CD downtime and questioning why people still use it.</td>
+              <td><a href="https://www.reddit.com/r/github/comments/1xxclfp/for_people_still_using_github_actions_for_cicd_why/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">64/100</span></td>
+              <td>google_serp / capterra.com</td>
+              <td><strong>monday.com</strong></td>
+              <td>Users find monday.com pricing to be high for supporting complex workflows.</td>
+              <td><a href="https://www.capterra.com/compare/147657-268205/monday-com-vs-Adobe-Workfront" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">64/100</span></td>
+              <td>google_serp / Bluesky (via SERP)</td>
+              <td><strong>GitHub</strong></td>
+              <td>User expresses a desire for a more reliable alternative regarding personal repo issues.</td>
+              <td><a href="https://bsky.app/profile/mcxfrank.bsky.social/post/3mzxtjeshsy2i" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">63/100</span></td>
+              <td>google_serp / capterra.com</td>
+              <td><strong>Asana</strong></td>
+              <td>Reviewers note issues with task assignment in Asana compared to Adobe Workfront.</td>
+              <td><a href="https://www.capterra.com/compare/184581-268205/Asana-PM-vs-Adobe-Workfront" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            </tbody></table></div></section>
+
+    <section class="card">
+      <details>
+        <summary>Solvability Hard-Gate Quality Proof (85 Rejected False Positives &mdash; $0 Lead Charge)</summary>
+        <p class="muted" style="margin: 10px 0;">Every item below failed factual solvability against the Verified Capabilities Ledger and was discarded before drafting or billing.</p>
+        <div class="table-wrap"><table><thead><tr><th>Source</th><th>Post</th><th>Gate Verdict</th><th>Why Rejected ($0 Lead Charge)</th></tr></thead><tbody>
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Amazon saves millions by replacing Sonnet 4.6 with Strands Decider</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Casual off-topic mention of ServiceNow business model, not a genuine user pain or product evaluation.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>KetchUp – Open-source SketchUp alternative built with Rust and WebGPU</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>General commentary, not a genuine pain point related to project management or IT service desks.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Ask HN: What are you working on? (November 2026)</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Self-promotion (&#x27;What are you working on?&#x27;) rather than a genuine user seeking alternatives or expressing product frustration.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Userscript managers in 2026: what Manifest V3 changed</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Informational link-sharing regarding browser extensions, completely unrelated to Atlassian products.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Lean verification of the Riemann Hypothesis</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Mathematical theorem verification discussion, entirely unrelated to software collaboration tools.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Together.ai: Prompt Leakage for Requests</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Commentary on AI security and accountability, not a workflow or project management software complaint.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Lean verification of the Riemann Hypothesis</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Cryptographic proof computation query, unrelated to enterprise collaboration suites.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Sandwich Simulator</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Off-topic anecdote about a hobby project.</td>
+            </tr>
+            </tbody></table></div>
+      </details>
+    </section>
+
+    <section class="card">
+      <details>
+        <summary>Stage 1 Grounding Anchor: Verified Capabilities Ledger (8 Facts)</summary>
+        <ul class="ledger-list"><li>Jira for project management, issue tracking, and agile Scrum and Kanban boards</li><li>Confluence for documentation and knowledge management</li><li>Bitbucket for Git repository hosting and code collaboration</li><li>Jira Service Management for IT service management and customer support</li><li>Trello for visual project management</li><li>Loom for asynchronous video communication</li><li>Rovo for AI-powered enterprise search, chat, and AI agents</li><li>Teamwork Graph connecting knowledge, people, decisions, and relationships</li></ul>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <strong>Compliance &amp; Privacy Notice:</strong> This Actor never auto-posts to Reddit, Hacker News, Bluesky, or review platforms and never scrapes private/logged-in personal data. Always review drafts before posting and ensure GDPR/local privacy compliance if you enrich any public handle later.
+    </footer>
+  </div>
+
+  <script>
+    window.__REPORT_META__ = {"product": "Atlassian", "hotLeads": 5, "warmSignals": 6, "generatedAt": "2026-11-22 05:06 UTC"};
+    function copyText(elementId, btn) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      const text = el.innerText || el.textContent || "";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          const orig = btn.innerText;
+          btn.innerText = "Copied!";
+          setTimeout(() => { btn.innerText = orig; }, 1600);
+        });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{
+  "product_category": "Performance Smartphone Brand",
+  "target_audience": "Mobile gamers, technology enthusiasts, students, and professionals",
+  "verified_capabilities": [
+    "High-capacity batteries up to 6000mAh",
+    "Qualcomm Snapdragon and MediaTek Dimensity processors",
+    "High-refresh-rate AMOLED displays",
+    "FlashCharge fast charging technology",
+    "Advanced cooling systems for gaming performance",
+    "Optical image stabilization camera systems",
+    "5G connectivity across device tiers"
+  ],
+  "pain_points_solved": [
+    "Short battery life during intense usage",
+    "Thermal throttling and heating issues during mobile gaming",
+    "Slow charging speeds on standard devices",
+    "Poor gaming performance in budget and mid-range segments",
+    "Lack of high-refresh-rate displays at competitive price points"
+  ],
+  "competitors": [
+    "OnePlus",
+    "Realme",
+    "Poco",
+    "Xiaomi",
+    "Samsung"
+  ],
+  "competitor_pain_queries": [
+    "OnePlus heating issues alternative",
+    "Realme performance phone alternative",
+    "Poco phone replacement",
+    "switching from Xiaomi",
+    "Samsung lagging gaming phone"
+  ],
+  "category_problem_queries": [
+    "best gaming smartphone under budget",
+    "phone with best battery life",
+    "high performance 5g smartphone"
+  ],
+  "g2_product_slugs": [
+    "oneplus",
+    "realme",
+    "xiaomi",
+    "samsung"
+  ],
+  "domain_context_terms": [
+    "smartphone",
+    "gaming",
+    "battery",
+    "processor",
+    "charging",
+    "display",
+    "camera",
+    "performance"
+  ],
+  "product_name": "iQOO Smartphones",
+  "product_url": "https://www.iqoo.com/in/",
+  "root_domain": "iqoo.com",
+  "exclude_terms": [
+    "iQOO Smartphones",
+    "iqoo.com",
+    "coupon",
+    "promo code",
+    "discount code",
+    "black friday",
+    "cyber monday",
+    "affiliate",
+    "we are hiring",
+    "job opening",
+    "for sale",
+    "referral link"
+  ],
+  "llm_provider_used": "gemini:gemini-3.5-flash-lite",
+  "crawl_diagnostics": {
+    "crawl_method": "httpx_direct",
+    "urls_fetched": [
+      "https://www.iqoo.com/in/"
+    ],
+    "http_status": 200,
+    "extracted_char_count": 480,
+    "warning": null
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/hubspot/comments/1gtftar/alternatives_to_zoominfo_instant_enrich/",
+  "author": "unknown",
+  "content": "Alternatives to ZoomInfo instant enrich?\nMy company currently uses ZoomInfo instant enrich to populate missing contact data at the time of contact creation (via form fill, etc). Getting this data populated instantly and accurately is crucial for us because we depend on it for automated lead routing.\n\nI’m reviewing alternatives due to concerns from the top about ZoomInfo’s price, and complaints raised from the sales team about data accuracy. \n\nMost posts I find seem to be asking about alternatives to zoominfo contact search, but I’m curious if anyone has recommendations for alternatives to the automated, instant enrich feature.",
+  "timestamp": "2024-11-17T15:21:52.000Z",
+  "competitor_mentioned": "Instantly"
+}

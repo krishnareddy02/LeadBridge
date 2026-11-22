@@ -1,0 +1,16 @@
+{
+  "productName": "Nike Shoes",
+  "productUrl": "https://www.nike.com",
+  "productDescription": "Nike is a global sportswear and athletic footwear brand offering performance shoes, lifestyle sneakers, and sports-specific footwear for men, women, and kids. Its footwear portfolio includes iconic collections such as Air Force 1, Air Max, Dunk, Jordan, Pegasus, Vomero, Alphafly, Metcon, and football boots. Nike focuses on innovative cushioning technologies such as Nike Air, Air Max, ZoomX, React, and Zoom Air, alongside comfort, durability, performance, style, and design. Its products serve multiple customer segments, including professional athletes, runners, gym enthusiasts, basketball and football players, sneaker collectors, and everyday lifestyle consumers. Nike sells through its official website, Nike retail stores, mobile applications, and authorized retail partners. Key customer decision factors include shoe comfort, sizing accuracy, durability, product quality, pricing, availability, delivery experience, return policies, and customer service. Its competitive positioning is built around athletic performance, product innovation, brand recognition, and lifestyle appeal.",
+  "competitors": [],
+  "sources": [
+    "google_serp",
+    "reddit",
+    "hacker_news",
+    "bluesky"
+  ],
+  "lookbackDays": 14,
+  "minWinabilityScore": 70,
+  "tone": "helpful_technical",
+  "llmApiKey": null
+}

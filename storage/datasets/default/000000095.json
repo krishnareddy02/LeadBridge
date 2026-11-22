@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/travelchina/comments/1wuii4i/alipay_issue_account_restricted_and_stuck_in/",
+  "author": "unknown",
+  "content": "Alipay issue - Account restricted and stuck in appeal loop: NFC passport scan instant-fails (\"Reading failed\")\nI just created my account before going to China and it says it got blocked/restricted when I scan a test QR code to see if it works. When I try to file an appeal to unblock it, the app requires a passport NFC scan to verify my identity. I am completely soft-locked because the NFC step instantly fails.\n\nEvery time I tap the passport, it immediately gives this error:\n\n\"Reading failed: Your passport information wasn't recognized\"\n\nCan anyone please help me? I also activated WeChat and i tried to test it but for WeChat it says you can't use this card for this transaction, so my trip is in 5 days and I panicking rn 😭",
+  "timestamp": "2026-09-30T22:15:53.000Z",
+  "competitor_mentioned": "Instantly"
+}

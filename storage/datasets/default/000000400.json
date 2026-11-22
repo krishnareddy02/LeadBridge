@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/btc/comments/cx08ux/storm_a_potential_alternative_approach_to_instant/",
+  "author": "unknown",
+  "content": "Storm: A potential alternative approach to instant confirmations\nHi folks,\n\nI have been a bit busy with something lately. I have implemented an idea on how to approach instant confirmations by further exploring the Subchains / Weak blocks idea. For more information, please have a look here:\n\nThe proposal: https://github.com/awemany/storm-sim/raw/master/whitepaper/storm-wp-2019-08-30.pdf\n\nThe accompanying simulation:  https://github.com/awemany/storm-sim\n\nThe preliminary, work-in-progress pull request: https://github.com/BitcoinUnlimited/BitcoinUnlimited/pull/1883\n\nI hope you guys find this interesting. Feedback welcome!\n\nEDIT: Updated WP to correct my Merklix error.",
+  "timestamp": "2019-08-29T12:30:29.000Z",
+  "competitor_mentioned": "Instantly"
+}

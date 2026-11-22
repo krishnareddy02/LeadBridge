@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/browsers/comments/1jjeq28/alternative_to_arc_that_syncs_all_tabs_instantly/",
+  "author": "unknown",
+  "content": "Alternative to Arc that sync's all tabs instantly between PCs and have support for profiles that are cookie-seperated\nI've tried Zen browser and its pretty good, but it doesn't sync all tabs all the time, and the profile from multi-container extension assigned to spaces doesn't sync correctly so there is quite a long way it seems. \n\nI've come to love instant sync so much that its the most important feature for me now. But a concept of spaces and profiles in those spaces to seperate cookies is hard to live without. \n\nBut Arc is dying so I'm beginning the search for an alternative. Hopefully there will be a non-chromium offer soon enough",
+  "timestamp": "2025-03-25T08:35:36.000Z",
+  "competitor_mentioned": "Instantly"
+}

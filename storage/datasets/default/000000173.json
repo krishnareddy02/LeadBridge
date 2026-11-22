@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/gtaonline/comments/1qdaoub/mission_creator_instant_fail/",
+  "author": "unknown",
+  "content": "Mission Creator instant fail\nI'm trying to test Team 2 for my mission, but for some reason it's just instantly failing the test and not giving me a reason. This only happens with Team 2 for some reason, Team 1 is fine. I've been checking so many things like mission criticals, bounds, spawning times, and tons more but I still can't find the issue. Does anyone know what it could possibly be?",
+  "timestamp": "2026-01-15T05:11:00.000Z",
+  "competitor_mentioned": "Instantly"
+}

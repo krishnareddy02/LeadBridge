@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/SideProject/comments/1uk2kgs/built_a_free_instantly_alternative_because_i/",
+  "author": "unknown",
+  "content": "built a free instantly alternative because i didn't want to pay to send outreach emails\nI've been doing cold outreach for a side project and got tired of paying for instantly/smartlead just to send a few hundred emails a week. so i built my own thing, [lightreach](https://github.com/nahumoore/lightreach), and figured i'd share it here in case anyone else is in the same boat\n\nit's self-hosted (you run it yourself, no monthly fee, no per-lead pricing) and basically does the core stuff i actually used from instantly:\n\n* connect your own smtp/imap mailboxes (gmail, outlook, whatever)\n* upload a csv of leads with a column mapping step\n* build multi-step sequences with delays between steps, spintax and merge fields so every email isn't identical\n* rotate sends across multiple mailboxes so you're not hammering one inbox\n* set sending windows, daily limits, random delay between sends so it doesn't look like a bot\n* polls your inbox and auto-detects replies\n\nno seat limits, no \"upgrade to unlock warmup,\" no $$ per lead. you host it, you own the data, that's it\n\nstill rough around some edges (no auth yet, it's single-user, definitely not enterprise software) but it covers the actual workflow i needed and i'd rather improve it in the open than keep paying for a saas i was barely using 20% of",
+  "timestamp": "2026-06-30T21:42:25.000Z",
+  "competitor_mentioned": "Instantly"
+}

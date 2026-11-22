@@ -1,0 +1,85 @@
+{
+  "product_category": "Athletic Footwear",
+  "target_audience": "Professional athletes, runners, gym enthusiasts, basketball and football players, sneaker collectors, everyday lifestyle consumers",
+  "verified_capabilities": [
+    "Offers performance shoes with Nike Air cushioning technology",
+    "Provides lifestyle sneakers featuring Air Max and React materials",
+    "Supplies sports-specific footwear for basketball, football, running, and gym use",
+    "Sells through official website, retail stores, mobile apps, and authorized partners",
+    "Provides sizing accuracy and return policies for online purchases",
+    "Delivers products with fast shipping and reliable delivery experience",
+    "Offers a wide range of iconic collections (Air Force 1, Dunk, Jordan, etc.)",
+    "Emphasizes durability and product quality across all lines"
+  ],
+  "pain_points_solved": [
+    "Need for comfortable, performance-optimized shoes for athletes",
+    "Difficulty finding accurate sizing for online purchases",
+    "Limited availability of specific models or sizes",
+    "Long delivery times and uncertain shipping",
+    "Inconsistent return policies across retailers",
+    "Lack of durable, high-quality footwear for intense sports"
+  ],
+  "competitors": [
+    "Adidas",
+    "Puma",
+    "Under Armour",
+    "New Balance",
+    "Reebok",
+    "ASICS"
+  ],
+  "competitor_pain_queries": [
+    "Adidas shoe alternative",
+    "Puma sneaker pricing",
+    "switching from Under Armour shoes",
+    "New Balance durability issues",
+    "ASICS running shoe complaints"
+  ],
+  "category_problem_queries": [
+    "performance shoe comfort",
+    "accurate shoe sizing online",
+    "durable athletic footwear"
+  ],
+  "g2_product_slugs": [
+    "adidas",
+    "puma",
+    "under-armour",
+    "new-balance",
+    "reebok",
+    "asics"
+  ],
+  "domain_context_terms": [
+    "shoes",
+    "sneakers",
+    "athletic",
+    "performance",
+    "cushioning",
+    "durability",
+    "sizing",
+    "delivery"
+  ],
+  "product_name": "Nike Shoes",
+  "product_url": "https://www.nike.com",
+  "root_domain": "nike.com",
+  "exclude_terms": [
+    "Nike Shoes",
+    "nike.com",
+    "coupon",
+    "promo code",
+    "discount code",
+    "black friday",
+    "cyber monday",
+    "affiliate",
+    "we are hiring",
+    "job opening",
+    "for sale",
+    "referral link"
+  ],
+  "llm_provider_used": "groq:openai/gpt-oss-20b",
+  "crawl_diagnostics": {
+    "crawl_method": "description_only_fallback",
+    "urls_fetched": [],
+    "http_status": 403,
+    "extracted_char_count": 0,
+    "warning": "Direct HTTP fetch returned status 403"
+  }
+}

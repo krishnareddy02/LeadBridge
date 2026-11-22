@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/scrum/comments/1hxcm07/is_fail_fast_just_a_copout_for_shipping_garbage/",
+  "author": "unknown",
+  "content": "Is \"fail fast\" just a cop-out for shipping garbage?\nWhile the concept is meant to encourage learning through iteration, I'm seeing it increasingly used as justification for rushing features into production without proper validation. What started as a principle for smart experimentation has somehow morphed into a convenient excuse to skip fundamental quality checks and testing phases.\n\nI'm curious if other Scrum practitioners have encountered something similar - how do you maintain the balance between rapid iteration and maintaining quality standards? The line between failing fast and failing recklessly seems increasingly blurred.",
+  "timestamp": "2025-01-09T13:19:13.000Z",
+  "competitor_mentioned": "Instantly"
+}

@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/comp_chem/comments/1e4pzz8/transition_metal_compounds_with_formal_charges/",
+  "author": "unknown",
+  "content": "Transition Metal Compounds With Formal Charges Instantly Fail (ORCA)\nHello! I am doing some computations related to several first row closed-shelled transition metal molecules and running into issues with ORCA. Any time I try to run a molecule with a formal charge, the computation instantly fails. Does anyone have any insight for this issue? I'm happy to provide any information that you may need to resolve this issue, but I am still very new to ORCA and computational chemistry in general.",
+  "timestamp": "2024-07-16T14:25:52.000Z",
+  "competitor_mentioned": "Instantly"
+}

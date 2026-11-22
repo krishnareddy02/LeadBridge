@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/codex/comments/1v2qdik/codex_desktop_instantly_fails_with_stream/",
+  "author": "unknown",
+  "content": "Codex Desktop instantly fails with \"stream disconnected before completion\" and localhost:10100 connection refused\nHi everyone,\n\nSince today my Codex Desktop app has completely stopped working.\n\nEvery single prompt immediately fails with one of these errors:\n\n    stream disconnected before completion: error sending request for url (http://127.0.0.1:10100/v1/responses)\n    \n    stream disconnected before completion:\n    Could not connect because the target machine actively refused it.\n    (OS error 10061)\n\nWhat I've already tried:\n\n* Reinstalled the app from the Microsoft Store\n* Restarted Windows multiple times\n* Reset the app\n* Tried brand new projects\n* Tried brand new chats\n* Tried a mobile hotspot instead of my home network\n* Checked Windows Defender (nothing blocked)\n* Checked Windows Firewall\n* No VPN\n* Internet works fine\n* `codex.exe` is running\n\nAdditional information:\n\n* Windows Store version: **26.715.9079.0**\n* Windows 11\n* The issue started **today**\n* The log files created after startup are **0 bytes**\n* `Test-NetConnection` [`127.0.0.1`](http://127.0.0.1) `-Port 10100` fails\n* `netstat` shows nothing listening on port **10100**\n\nIt looks like the internal localhost service never starts, so every prompt immediately fails.\n\nHas anyone seen this after the latest update or knows how to fix it?\n\nThanks!",
+  "timestamp": "2026-07-21T18:11:49.000Z",
+  "competitor_mentioned": "Instantly"
+}

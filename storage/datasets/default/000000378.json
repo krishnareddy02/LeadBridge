@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/coolgithubprojects/comments/1sczg7e/omnisearch_alternative_to_windows_search_it_uses/",
+  "author": "unknown",
+  "content": "OmniSearch: alternative to Windows Search. It uses MFT indexing for instant results and includes a built-in duplicate finder.\nHey everyone! I built **OmniSearch** - an open-source Windows desktop file search and duplicate finder focused on **speed, local-first privacy, and a clean desktop workflow**.\n\nUnder the hood it uses a native **C++ NTFS scanner** for fast indexing, connected through a **Rust bridge**, with a **Tauri + React** UI.\n\n## What it can do\n- Fast local search across NTFS drives\n- Advanced filters by extension, size, and created date\n- Optional **Quick Window** with a customizable global hotkey\n- Background + tray support for faster access\n- Image, video, and PDF previews\n- Duplicate finder with grouped results, progress, and direct delete flow\n- File actions like open, reveal folder, rename, copy path / filename, and delete\n- Drag files out of search results into Explorer or other apps\n- Multiple theme options with light / dark support\n\n\n## Links\n**GitHub:**  \nhttps://github.com/Eul45/omni-search\n\n**Microsoft Store:**  \nhttps://apps.microsoft.com/detail/9N7FQ8KPLRJ2?hl=en-us&gl=US&ocid=pdpshare\n\nEverything runs locally on your PC, and file metadata stays on-device.\n\nI’d really love feedback on what to improve next, especially around:\n- keyboard-first UX\n- preview performance\n- indexing/search quality\n- duplicate cleanup workflow\n- overall desktop polish",
+  "timestamp": "2026-04-05T09:40:43.000Z",
+  "competitor_mentioned": "Instantly"
+}

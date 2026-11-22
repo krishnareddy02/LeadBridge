@@ -1,0 +1,10 @@
+{
+  "hot_leads": [],
+  "warm_signals": [],
+  "unresolved_market_gaps": [],
+  "discarded": [],
+  "total_evaluated": 0,
+  "llm_batches_sent": 0,
+  "llm_batches_failed": 0,
+  "providers_used": []
+}

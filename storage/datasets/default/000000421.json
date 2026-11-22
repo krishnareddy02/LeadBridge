@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/techsupport/comments/1d0avsv/alternatives_to_nvidia_instant_replay_with_hdr/",
+  "author": "unknown",
+  "content": "Alternatives to NVIDIA Instant Replay? (With HDR Support)\nI have this constant issue of Instant Replay turning itself off, I even installed software like [Always Shadow](https://github.com/Verpous/AlwaysShadow) just for it to work correctly, but it's still issues on issues.\n\nI am searching for an alternative which can do 5 minute 60fps/1440p videos with **HDR support and ability to upload to YouTube**.  \nI've tried [Steelseries Moments](https://steelseries.com/gg/moments) but they kinda suck at it and can just record videos in SDR with a Watermark...\n\nI've heard people using [medal.tv](http://medal.tv), with HDR capture being in early access.\n\nSo what is your opinion? Personally I would not be against using [Steelseries Moments](https://steelseries.com/gg/moments) if there is HDR support that I can enable, but if there's not, **what platform or software do you recommend**?",
+  "timestamp": "2024-05-25T12:24:57.000Z",
+  "competitor_mentioned": "Instantly"
+}

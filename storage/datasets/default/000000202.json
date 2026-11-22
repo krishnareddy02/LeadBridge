@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/HiTMAN/comments/1oyedib/hitman_3_romania_escalation_bug_picking_up_sniper/",
+  "author": "unknown",
+  "content": "Hitman 3 Romania Escalation Bug — Picking Up Sniper, Leaving Container = Instant Fail (Anyone else?)\nHi everyone,  \nI keep running into a really weird bug on the Romania / Carpathian Mountains escalation in Hitman 3 and I’m wondering if anyone else has experienced this:\n\nWhenever I pick up the sniper rifle inside the container and then try to leave the container, the mission instantly fails.\n\nIt doesn’t matter if I:\n\n* wait inside the container\n* walk out slowly\n* switch weapons\n* restart the mission\n* restart the escalation from Level 1\n* reload saves\n* restart the game\n* or try different exits\n\nIt still instantly fails the moment I step out of the container.\n\nIt’s now happened three times in a row, and I’ve tried every workaround I could find. None of them fix it.\n\nIs this a known bug?  \nHas anyone found a specific workaround or path that prevents the fail trigger?  \nOr is the escalation just broken right now?\n\nAny help is appreciated — I really want to finish this one but it’s literally unplayable at the moment.\n\nThanks!",
+  "timestamp": "2025-11-16T06:19:25.000Z",
+  "competitor_mentioned": "Instantly"
+}

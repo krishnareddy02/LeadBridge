@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/LowSodiumCyberpunk/comments/1lpv43p/why_does_synapse_burnout_if_used_on_an_npc_who/",
+  "author": "unknown",
+  "content": "Why does Synapse Burnout, if used on an NPC who instantly dies, automatically fail the tracing process on V, but, if I use Short Circuit, it leads to triggering tracing on V despite the NPC dying immediately?\nBottom Text",
+  "timestamp": "2025-07-02T12:55:00.000Z",
+  "competitor_mentioned": "Instantly"
+}

@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/prius/comments/1qioox8/techstream_brake_bleeding_instantly_fails/",
+  "author": "unknown",
+  "content": "Techstream Brake Bleeding instantly fails.  Suggestions?\nHey folks - I have a 2012 Prius Gen 3 with 222K miles on it and over the past few days have replaced the Brake Booster Pump, ABS Actuator, and installed a cleaned EGR system.  Everything is back in place, and I am now stuck on doing the Brake Air Bleeding.  I am using a cracked version of Techstream (18.00.008), a Diagking Mini-VCI cable and my ancient Dell laptop with Windows 10.  Techstream connects to the car well, but when I try to start the Brake Air Bleeding procedure, it instantly fails.  I am following this video: [https://youtu.be/lGeXyYIPzAQ](https://youtu.be/lGeXyYIPzAQ), but only successfully get to the point where the host is at the 2:47 mark. The vehicle is stopped (it's up on jack stands with no wheels), parking brake is applied, power switch is on, ready is OFF and the Reservoir Level Switch is disconnected.  I am somewhat unsure about the Ready OFF - do I press the power button twice to get to that state?  Do I get the car into the Invalid state?  The video skips over this step and I wonder if I am missing something there that is triggering the failure.  Any and all tips/tricks are appreciated, especially if you have used a similar setup to do a brake bleed after the ABS actuator has been replaced.\n\n  \nEdited for correct Techstream version number.",
+  "timestamp": "2026-01-21T04:55:59.000Z",
+  "competitor_mentioned": "Instantly"
+}

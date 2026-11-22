@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/AynThor/comments/1trkqmf/psa_if_your_steam_downloads_instantly_fail_with_a/",
+  "author": "unknown",
+  "content": "PSA: If your Steam downloads instantly fail with a fresh install, and you had configured the client to use external storage before downloading anything, try disabling external storage in the GameNative settings and installing your first game to internal storage",
+  "timestamp": "2026-05-30T00:33:19.000Z",
+  "competitor_mentioned": "Instantly"
+}

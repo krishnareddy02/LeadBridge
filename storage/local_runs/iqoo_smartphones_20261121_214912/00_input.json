@@ -1,0 +1,16 @@
+{
+  "productName": "iQOO Smartphones",
+  "productUrl": "https://www.iqoo.com/in/",
+  "productDescription": "iQOO is a smartphone brand associated with vivo, focused on delivering high-performance smartphones with powerful processors, gaming capabilities, advanced camera systems, fast charging, and long-lasting batteries. Its product portfolio includes flagship iQOO smartphones, Neo Series performance-oriented devices, and Z Series budget and mid-range smartphones. The brand targets mobile gamers, technology enthusiasts, students, professionals, content creators, and everyday smartphone users. Key product features include Qualcomm Snapdragon and MediaTek Dimensity processors, high-refresh-rate AMOLED displays, advanced cooling systems, large-capacity batteries, FlashCharge fast charging, optical image stabilization (OIS), 5G connectivity, and AI-powered smartphone features. iQOO differentiates itself through performance-focused hardware, gaming optimization, competitive specifications, and value for money. Its products are sold through its official website, online marketplaces, and authorized retail stores. Important customer decision factors include gaming performance, heating issues, battery life, charging speed, camera quality, software updates, operating system experience, display quality, durability, pricing, after-sales service, and warranty support. Its competitive positioning focuses on delivering flagship-level performance and gaming experiences across multiple price segments.",
+  "competitors": [],
+  "sources": [
+    "google_serp",
+    "reddit",
+    "hacker_news",
+    "bluesky"
+  ],
+  "lookbackDays": 14,
+  "minWinabilityScore": 70,
+  "tone": "helpful_technical",
+  "llmApiKey": null
+}

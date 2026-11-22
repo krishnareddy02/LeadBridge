@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/indiehackers/comments/1sy3y5o/build_fast_fail_fast_has_always_felt_wrong_to_me/",
+  "author": "unknown",
+  "content": "\"Build fast, fail fast\" has always felt wrong to me. Agreed?\nHey, indiehackers!\n\nI work at an AI startup validation platform. We spend a lot of time talking to early-stage founders, and one pattern keeps coming up.\n\nThe \"build fast\" mantra has become so normalized that founders treat it as permission to skip validation entirely. The assumption is: ship something, the market will correct you.\n\nBut by the time the market corrects you, you've spent 12–18 months building the wrong thing. The feedback loop is too slow and too expensive.\n\nWhat we've found works better: small continuous validation loops before building starts. Lightweight customer discovery, early positioning tests, synthetic interviews – none of which requires a product.\n\nCurious if others have seen this. Has \"build fast\" actually helped the founders you've watched? Or does it mostly just make people feel better about skipping the hard thinking?\n\n\\---\n\nOur CEO Vesko is doing a live AMA on exactly this topic next week – questions sourced from founders across Reddit, LinkedIn, and Twitter. If you've got something you'd want to ask him about validation, early GTM, or AI in the founder workflow, drop it below or on the event page.",
+  "timestamp": "2026-04-28T15:02:02.000Z",
+  "competitor_mentioned": "Instantly"
+}

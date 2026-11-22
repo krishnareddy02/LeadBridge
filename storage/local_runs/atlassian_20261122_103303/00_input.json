@@ -1,0 +1,16 @@
+{
+  "productName": "Atlassian",
+  "productUrl": "https://www.atlassian.com",
+  "productDescription": "Atlassian is a global enterprise software company that develops collaboration, project management, software development, IT service management, and productivity tools for organizations of all sizes. Its product ecosystem includes Jira for project and issue tracking, Confluence for documentation and knowledge management, Bitbucket for Git repository hosting and code collaboration, Jira Service Management for IT service management and customer support, Trello for visual project management, Loom for asynchronous video communication, and Rovo for AI-powered enterprise search, chat, and AI agents. Atlassian helps software engineering teams, IT departments, product managers, business teams, and enterprises plan projects, manage workflows, collaborate on tasks, track software development, document knowledge, and automate business processes. Its platform offers agile Scrum and Kanban boards, customizable workflows, sprint planning, roadmaps, automation rules, integrations, reporting, access controls, cloud hosting, and enterprise administration capabilities. Key customer decision factors include ease of use, pricing and subscription plans, product performance, workflow customization, integration capabilities, platform reliability, data security, scalability, customer support, migration complexity, and user experience. Common customer pain points include complicated interfaces, expensive subscription upgrades, pricing changes, permission management difficulties, performance issues, notification overload, workflow configuration complexity, limited reporting flexibility, integration problems, and challenges managing large enterprise projects. Atlassian's value proposition centers on connecting teams, improving productivity, simplifying software delivery, and providing an integrated ecosystem for managing organizational work.",
+  "competitors": [],
+  "sources": [
+    "google_serp",
+    "reddit",
+    "hacker_news",
+    "bluesky"
+  ],
+  "lookbackDays": 14,
+  "minWinabilityScore": 70,
+  "tone": "helpful_technical",
+  "llmApiKey": null
+}

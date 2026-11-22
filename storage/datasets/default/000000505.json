@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/selfhosted/comments/xkcmtl/self_hosted_alternative_to_teams_slack_for_file/",
+  "author": "unknown",
+  "content": "Self hosted alternative to teams / slack, for file sharing and instant messaging?\n   I’ve got a lot of group projects that span the whole semester, in almost all of my college classes, every semester. Everyone wants to use teams, or slack, or discord, but they always end up being a company I’d rather not use, or lack some kind of functionality. Is there a good software I could self host to do everything these programs do, preferably in docker.",
+  "timestamp": "2022-09-21T18:20:44.000Z",
+  "competitor_mentioned": "Instantly"
+}

@@ -1,0 +1,23 @@
+{
+  "complaints": [],
+  "telemetry": [
+    {
+      "source": "hacker_news",
+      "status": "ok",
+      "items_collected": 0,
+      "fallback_used": true,
+      "error": null
+    },
+    {
+      "source": "bluesky",
+      "status": "skipped",
+      "items_collected": 0,
+      "fallback_used": false,
+      "error": "Bluesky HTTP 403 (public CDN rate/auth block)"
+    }
+  ],
+  "fallback_triggered": true,
+  "pass1_unique_count": 0,
+  "pass2_added_count": 0,
+  "total_unique_count": 0
+}

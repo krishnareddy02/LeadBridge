@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/FPGA/comments/1ieqei4/help_needed_de10lite_board_instantly_fails_on/",
+  "author": "unknown",
+  "content": "Help Needed, DE10-Lite Board Instantly Fails on Startup\nProgrammer instantly fails when clicking start. Altera USB-Blaster driver is up to date. I am at a loss of what could be causing it. This program was working a couple of months ago, the only difference is I have a new (identical) DE10 board and a new USB-Blaster cable.\n\n![img](nhvuqctshege1)",
+  "timestamp": "2025-01-31T21:51:42.000Z",
+  "competitor_mentioned": "Instantly"
+}

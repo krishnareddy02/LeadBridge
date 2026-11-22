@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/Ubiquiti/comments/1g58ipp/g4_instants_fail_to_connect_to_unifi_wifi/",
+  "author": "unknown",
+  "content": "G4 instants fail to connect to Unifi wifi\nI've tried this with 3 G4 Instants on 2 separate networks, both running unifi APs.  The cameras will boot and pop up in the Unifi protect app on my phone. I try to adopt them, select the ssid, enter password, then they all throw the same error. \"Error while adopting device. Something went wrong while sending access point to camera try again.\"  Has anyone seen this message before?",
+  "timestamp": "2024-10-16T19:59:04.000Z",
+  "competitor_mentioned": "Instantly"
+}

@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/nanocurrency/comments/nf2v9r/fail_fast_instead_of_leaving_transactions_hanging/",
+  "author": "unknown",
+  "content": "Fail fast instead of leaving transactions hanging indefinitely\nRather than leaving unconfirmed transactions hanging indefinitely, possibly leading to desynchronized states where each node is trying to confirm different transactions from yonks ago, why not automatically fail a transaction if it doesn't reach quorum within 1 minute say. The users wallet would show an error and tell them to retry. This would both keep the network cleaner and also imo is better UX.",
+  "timestamp": "2021-05-18T06:06:20.000Z",
+  "competitor_mentioned": "Instantly"
+}

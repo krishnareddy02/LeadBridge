@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/prettyusefulwebsites/comments/1vpywer/i_built_sendlyy_an_instant_zeroinstall_airdrop/",
+  "author": "unknown",
+  "content": "I built Sendlyy – an instant, zero-install AirDrop alternative to transfer photos & files from phone to PC (No cloud, 100% P2P WebRTC)\nHey everyone!   \nLike many of you, I was frustrated by how annoying it is to quickly drop photos or files from an Android/iPhone to a Windows PC or Mac without using cables, emailing myself, or uploading to Google Drive.  \nSo I created Sendlyy – a lightweight, web-based tool designed for instant device-to-device transfers.  \nHow it works:  \n1. Open \\[sendlyy.net\\](https://sendlyy.net/) on your computer.  \n2. Scan the QR code with your phone camera.  \n3. Select your photos or files and swipe up – they transfer instantly to your PC.  \n\\*\\*Key Features:\\*\\*  \n\\-  \\*\\*100% Private & P2P\\*\\*: Files stream directly between devices via WebRTC (encrypted DTLS/SRTP). No files are uploaded to any cloud or server.  \n\\-  \\*\\*Zero Installation\\*\\*: Runs entirely in the browser. No app store downloads, no account setup.  \n\\-  \\*\\*Cross-Platform\\*\\*: Works smoothly between Android, iOS, Windows, Mac, Linux.  \nI'd love to hear your feedback, feature suggestions, or any bugs you run into!  \nTry it out here: [https://sendlyy.net/](https://sendlyy.net/)",
+  "timestamp": "2026-08-16T14:45:35.000Z",
+  "competitor_mentioned": "Instantly"
+}

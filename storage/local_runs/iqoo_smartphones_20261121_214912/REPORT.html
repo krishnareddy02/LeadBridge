@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complaint-to-Revenue Executive Brief &mdash; iQOO Smartphones</title>
+  <style>
+    :root {
+      --bg: #f8f7f4;
+      --surface: #ffffff;
+      --ink: #1e1b2e;
+      --muted: #5c586e;
+      --border: #e6e2ee;
+      --purple: #3b1d6c;
+      --teal: #0f766e;
+      --teal-soft: #e6f6f4;
+      --coral: #e05a47;
+      --coral-soft: #fdecea;
+      --amber: #b45309;
+      --amber-soft: #fef3c7;
+      --purple-soft: #efe9fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 28px 20px 56px; }
+    .hero {
+      background: linear-gradient(135deg, var(--purple) 0%, #241046 100%);
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+    .hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+    .hero h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: -0.02em; }
+    .hero p { margin: 0; color: rgba(255,255,255,0.82); font-size: 14px; }
+    .badge-live {
+      background: rgba(15, 118, 110, 0.25);
+      border: 1px solid rgba(94, 234, 212, 0.45);
+      color: #99f6e4;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .kpi {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .kpi-num { font-size: 28px; font-weight: 800; color: var(--purple); line-height: 1.1; }
+    .kpi-num.teal { color: var(--teal); }
+    .kpi-num.coral { color: var(--coral); }
+    .kpi-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-top: 4px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(30, 27, 46, 0.04);
+    }
+    h2 { font-size: 19px; margin: 28px 0 12px; color: var(--purple); }
+    .sub-h { font-size: 14px; margin: 0 0 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+    .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; }
+    .bar-label { width: 150px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bar-track { flex: 1; height: 10px; background: #eeeaf5; border-radius: 999px; overflow: hidden; }
+    .bar-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--purple)); border-radius: 999px; }
+    .bar-val { width: 24px; text-align: right; font-weight: 700; color: var(--purple); }
+    .pill-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .pill-teal { background: var(--teal-soft); color: var(--teal); }
+    .pill-coral { background: var(--coral-soft); color: var(--coral); }
+    .pill-amber { background: var(--amber-soft); color: var(--amber); }
+    .pill-purple { background: var(--purple-soft); color: var(--purple); }
+    .pill-neutral { background: #f1eff6; color: var(--ink); }
+    .lead-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
+    .lead-meta { display: flex; align-items: center; gap: 14px; }
+    .score-badge {
+      background: var(--purple);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      padding: 8px 12px;
+      border-radius: 10px;
+      min-width: 78px;
+      text-align: center;
+    }
+    .score-badge span { font-size: 12px; font-weight: 500; opacity: 0.78; }
+    .lead-title { font-size: 16px; font-weight: 700; color: var(--ink); }
+    .lead-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .btn-link {
+      text-decoration: none;
+      background: var(--purple-soft);
+      color: var(--purple);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 7px 13px;
+      border-radius: 8px;
+    }
+    .btn-link:hover { background: #e3d7f7; }
+    .pain-summary { margin: 10px 0 14px; font-size: 14px; }
+    .section-mini { margin-bottom: 14px; }
+    .mini-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 700; margin-bottom: 6px; }
+    .safety-box {
+      background: var(--amber-soft);
+      border-left: 4px solid var(--amber);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #78350f;
+      margin-bottom: 16px;
+    }
+    .drafts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+    .draft-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fbfafc;
+      padding: 12px 14px;
+    }
+    .draft-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; gap: 8px; }
+    .draft-label { font-size: 12px; font-weight: 700; color: var(--purple); }
+    .copy-btn {
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 11px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .copy-btn:hover { background: #0c5f59; }
+    .draft-text {
+      margin: 0;
+      white-space: pre-wrap;
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--ink);
+    }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: #f4f1fa; color: var(--purple); font-size: 12px; text-transform: uppercase; }
+    details summary { cursor: pointer; font-weight: 700; color: var(--purple); }
+    .ledger-list { margin: 10px 0 0; padding-left: 20px; font-size: 13px; color: var(--muted); }
+    .muted { color: var(--muted); font-size: 13px; }
+    .footer {
+      margin-top: 32px;
+      padding: 16px 20px;
+      border-radius: 10px;
+      background: #f1eff6;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="hero-top">
+        <div>
+          <h1>iQOO Smartphones &mdash; Competitor Churn &amp; Outreach Brief</h1>
+          <p>Performance Smartphone Brand &middot; Lookback: 14 days &middot; Min Hot Score: 70/100 &middot; Generated 2026-11-21 16:21 UTC</p>
+        </div>
+        <span class="badge-live">Human-in-the-Loop Safe</span>
+      </div>
+    </header>
+
+    <section class="kpi-grid">
+      <div class="kpi"><div class="kpi-num">63</div><div class="kpi-label">Harvested (Stage 2)</div></div>
+      <div class="kpi"><div class="kpi-num">7</div><div class="kpi-label">Filtered Free (Stage 3)</div></div>
+      <div class="kpi"><div class="kpi-num teal">19</div><div class="kpi-label">Hot Leads Drafted</div></div>
+      <div class="kpi"><div class="kpi-num">5</div><div class="kpi-label">Warm / SEO Signals</div></div>
+      <div class="kpi"><div class="kpi-num coral">29</div><div class="kpi-label">Noise Rejected ($0)</div></div>
+    </section>
+
+    <section class="card">
+      <div class="mini-label">Source Harvest Telemetry</div>
+      <div class="pill-wrap" style="margin-bottom: 16px;"><span class="pill pill-neutral">hacker_news: <strong>11</strong> (ok)</span><span class="pill pill-neutral">bluesky: <strong>0</strong> (skipped)</span><span class="pill pill-neutral">google_serp: <strong>18</strong> (ok)</span><span class="pill pill-neutral">reddit: <strong>34</strong> (ok)</span></div>
+      
+    <div class="grid-2">
+      <div>
+        <h3 class="sub-h">Complaints by Competitor</h3>
+        
+            <div class="bar-row">
+              <div class="bar-label">OnePlus</div>
+              <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+              <div class="bar-val">14</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Xiaomi</div>
+              <div class="bar-track"><div class="bar-fill" style="width:35%"></div></div>
+              <div class="bar-val">5</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Poco</div>
+              <div class="bar-track"><div class="bar-fill" style="width:28%"></div></div>
+              <div class="bar-val">4</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Category-Level</div>
+              <div class="bar-track"><div class="bar-fill" style="width:12%"></div></div>
+              <div class="bar-val">1</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Poco/Xiaomi</div>
+              <div class="bar-track"><div class="bar-fill" style="width:12%"></div></div>
+              <div class="bar-val">1</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Huawei</div>
+              <div class="bar-track"><div class="bar-fill" style="width:12%"></div></div>
+              <div class="bar-val">1</div>
+            </div>
+            
+      </div>
+      <div>
+        <h3 class="sub-h">Top Pain Themes</h3>
+        <div class="pill-wrap"><span class="pill pill-amber">Seeking Alternative <strong>(6)</strong></span><span class="pill pill-amber">Gaming Performance <strong>(2)</strong></span><span class="pill pill-amber">Battery Drain <strong>(2)</strong></span><span class="pill pill-amber">Battery Degradation <strong>(2)</strong></span><span class="pill pill-amber">Software Bugs <strong>(2)</strong></span><span class="pill pill-amber">Battery Overheating <strong>(1)</strong></span></div>
+      </div>
+    </div>
+    
+    </section>
+
+    <h2>Actionable Hot Leads (19)</h2>
+    
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">95<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#1 &middot; OnePlus &mdash; Battery Overheating</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/PickAnAndroidForMe) &middot;
+                      u/Ad3k03 &middot;
+                      Solvability 50/50 &middot; Urgency 25/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/PickAnAndroidForMe/comments/1y1upow/change_from_oneplus_12/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User wants to replace a phone due to poor battery life and overheating issues.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; FlashCharge fast charging technology</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/PickAnAndroidForMe): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-1', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-1" class="draft-text">When dealing with thermal throttling and rapid battery drain on recent updates, checking devices that utilize dedicated vapor chamber cooling alongside high-capacity cells up to 6000mAh can mitigate sustained load degradation. Full disclosure: I work on iQOO smartphones, which heavily emphasize advanced cooling systems and FlashCharge technology to handle heavy workloads. If you are looking outside of Samsung, focusing on hardware with robust thermal dissipation is key to avoiding the heating issues you experienced.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-1', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-1" class="draft-text">I saw you are dealing with persistent overheating and battery drain on your current device. Devices featuring advanced cooling systems and high-capacity batteries up to 6000mAh handle sustained performance much better under heavy loads. Let me know if you want to look at how our hardware specs compare for your budget.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">90<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#2 &middot; Category-Level &mdash; Seeking Alternative</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/PickAnAndroidForMe) &middot;
+                      u/KnownVeterinarian625 &middot;
+                      Solvability 45/50 &middot; Urgency 25/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/PickAnAndroidForMe/comments/1y1u01t/pick_an_android/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is looking to buy an Android flagship under 560 euro prioritizing battery life, software support, display, and CPU.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; High-refresh-rate AMOLED displays</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/PickAnAndroidForMe): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-2', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-2" class="draft-text">To hit solid screen-on time targets like 7-8 hours, look closely at power-efficient Qualcomm Snapdragon and MediaTek Dimensity processors paired with high-refresh-rate AMOLED displays and large cell capacities up to 6000mAh. Disclosure: I&#x27;m with iQOO, where our focus is heavily on high-performance chipsets and battery longevity. Balancing an efficient processor with a high-capacity power cell is usually the most reliable way to clear that SOT threshold.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-2', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-2" class="draft-text">Since your primary target is consistent battery life with 7-8 hours SOT paired with a strong CPU and display, matching with devices running efficient Snapdragon/Dimensity processors and high-capacity batteries up to 6000mAh is your best bet. Happy to share a quick spec breakdown for models matching those exact requirements.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">90<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#3 &middot; Xiaomi &mdash; Performance Complaint</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/Xiaomi17) &middot;
+                      u/the_idiopathic &middot;
+                      Solvability 45/50 &middot; Urgency 25/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/Xiaomi17/comments/1y1vtp1/kachra_phone_x17/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User complains about poor RAM management, lack of updates, heating, and average battery life on the Xiaomi X17.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/Xiaomi17): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-3', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-3" class="draft-text">Thermal loads pushing temps past 42 degrees under heavy daily use usually point to inadequate passive heat dissipation or inefficient chip scheduling. Full disclosure: I work on iQOO smartphones, which utilize advanced cooling systems designed to sustain high workloads without severe thermal throttling. If you are troubleshooting thermal and battery degradation issues, checking out devices with robust vapor chamber architecture makes a notable difference.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-3', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-3" class="draft-text">It sounds like you&#x27;ve been dealing with frustrating thermal management and battery drain issues on your current daily driver. Looking at hardware built with advanced cooling systems and high-capacity batteries up to 6000mAh helps prevent those severe temperature spikes during extended use. Let me know if you want a technical breakdown of how we handle sustained performance.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">88<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#4 &middot; OnePlus &mdash; Hardware Damage</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 50/50 &middot; Urgency 28/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/PickAnAndroidForMe/comments/1xzf5od/which_phone_should_i_choose_after_the_oneplus/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is looking for a new phone recommendation after damaging their current device.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; High-refresh-rate AMOLED displays</span><span class="pill pill-teal">&#10003; FlashCharge fast charging technology</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span><span class="pill pill-teal">&#10003; Optical image stabilization camera systems</span><span class="pill pill-teal">&#10003; 5G connectivity across device tiers</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-4', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-4" class="draft-text">Hardware damage like water in camera modules is tough to fix without a full assembly swap, so looking at replacements with reliable optical image stabilization and solid baseline specs makes sense. Disclosure: I&#x27;m with iQOO, where we build devices featuring Qualcomm and MediaTek processors, high-refresh AMOLEDs, and FlashCharge capabilities. Prioritizing units with robust cooling and fast top-ups can keep your daily workflow uninterrupted.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-4', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-4" class="draft-text">Since you are pivoting away from your current setup after some hardware damage, focusing on a balanced performance device with high-refresh AMOLED displays, strong processors, and fast charging is a solid move. Let me know if you want a quick feature comparison to help narrow down your next pick.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">86<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#5 &middot; Poco &mdash; Battery And Heating</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 50/50 &middot; Urgency 26/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/PocoPhones/comments/1xqzt99/poco_x8_pro_crazy_battery_drain_again/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User complains about crazy battery drain during gaming and heating issues on the Poco X8 Pro.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; FlashCharge fast charging technology</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-5', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-5" class="draft-text">Heavy gaming loads notoriously push mobile processors hard, causing rapid battery depletion if thermal dissipation isn&#x27;t aggressive enough to handle sustained peak clocks. Full disclosure: I work on iQOO, where we engineer our devices around advanced cooling systems and high-capacity batteries up to 6000mAh to sustain heavy gaming sessions. Ensuring your next hardware choice has proper vapor chamber coverage is critical for keeping temperatures and drain under control.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-5', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-5" class="draft-text">I noticed you&#x27;re battling severe battery drain and heating during gaming sessions. Devices equipped with advanced cooling systems and FlashCharge technology help manage those thermal spikes and get you back to full power quickly. Let me know if you want to review specs on devices built specifically for sustained gaming loads.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">85<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#6 &middot; Poco/Xiaomi &mdash; Gaming Performance</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/EmulationOnAndroid) &middot;
+                      u/KanameHaru &middot;
+                      Solvability 45/50 &middot; Urgency 20/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/EmulationOnAndroid/comments/1y1mfnu/which_one_to_pick_here_hope_you_can_help_me/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is looking for an Android device capable of handling emulation for PS2, 3DS, and Switch.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/EmulationOnAndroid): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-6', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-6" class="draft-text">For heavy emulation like PS2 and Switch on Android, the Snapdragon 870 on the Pad 6 is significantly better than the 7s Gen 2 for sustained performance, though thermal throttling can still hit during long sessions. Full disclosure: I work on iQOO, where we focus heavily on pairing Qualcomm and MediaTek chipsets with advanced cooling systems. If you are open to looking at phones for emulation, those cooling setups help maintain stable frame rates when pushing hardware-heavy titles.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-6', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-6" class="draft-text">Since you are balancing demanding emulators like Switch and PS2, our devices utilize advanced cooling systems alongside high-end Qualcomm and MediaTek processors to prevent thermal throttling during long gaming sessions. Let me know if you want to look at specific performance benchmarks or thermal test results for your use case.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">80<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#7 &middot; OnePlus &mdash; Seeking Alternative</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 25/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/oneplusnord/comments/1xrr2ho/oneplus_nord_6_5g_8gb256gb_1_month_old_barely/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is selling a OnePlus device due to issues and asking for alternative phone recommendations.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; High-refresh-rate AMOLED displays</span><span class="pill pill-teal">&#10003; FlashCharge fast charging technology</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span><span class="pill pill-teal">&#10003; Optical image stabilization camera systems</span><span class="pill pill-teal">&#10003; 5G connectivity across device tiers</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-7', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-7" class="draft-text">Moving away from devices with reliability or hardware issues usually means prioritizing sustained performance and thermal management. Full disclosure: I&#x27;m with iQOO, where our lineup features high-capacity batteries up to 6000mAh, FlashCharge fast charging technology, and advanced cooling systems for gaming performance. It is worth checking out options that balance robust Snapdragon or MediaTek processors with high-refresh-rate AMOLED displays if you want a reliable daily driver.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-7', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-7" class="draft-text">If you are comparing alternatives after moving away from your previous device, our models pack high-capacity batteries up to 6000mAh with FlashCharge technology and high-refresh-rate AMOLED displays. Let me know if you want a quick spec breakdown or help matching a device tier to your specific usage needs.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">80<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#8 &middot; OnePlus &mdash; Seeking Alternative</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 25/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/PickAnAndroidForMe/comments/1y10s8r/opinions_on_oneplus_vs_google_pixel_or_other/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is asking for opinions and alternatives comparing OnePlus, Google Pixel, and other phones.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; High-refresh-rate AMOLED displays</span><span class="pill pill-teal">&#10003; FlashCharge fast charging technology</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span><span class="pill pill-teal">&#10003; Optical image stabilization camera systems</span><span class="pill pill-teal">&#10003; 5G connectivity across device tiers</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-8', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-8" class="draft-text">When comparing options across brands like OnePlus and Pixel, it usually comes down to whether you prioritize raw performance efficiency or camera processing. Full disclosure: I work on iQOO, focusing on performance-centric builds utilizing Qualcomm and MediaTek processors paired with advanced cooling systems and high-refresh-rate AMOLED displays. Depending on what you value most—battery tech like FlashCharge or display smoothness—it helps to look closely at how sustained loads are handled.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-8', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-8" class="draft-text">Navigating choices between Pixel and performance alternatives can be tricky, but if you prioritize sustained hardware capability, our devices feature advanced cooling systems and high-refresh-rate AMOLED displays. Happy to share direct hardware comparisons or help evaluate specs if you are narrowing down your next device.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">80<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#9 &middot; Poco &mdash; Battery Drain</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 25/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/PocoPhones/comments/1xwoyxa/never_buying_poco_again/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User expresses extreme frustration with POCO phones due to battery drain issues.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; FlashCharge fast charging technology</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-9', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-9" class="draft-text">Unexplained background drain and thermal issues on older processor builds can completely ruin the daily experience. Full disclosure: I&#x27;m with iQOO, where we address power efficiency using high-capacity batteries up to 6000mAh paired with FlashCharge fast charging technology to minimize downtime. If battery reliability is your main pain point, looking closely at power management and charging speeds on newer hardware tiers makes a huge difference.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-9', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-9" class="draft-text">If persistent battery drain issues have you looking away from your current brand, our devices feature high-capacity batteries up to 6000mAh paired with FlashCharge fast charging technology. Let me know if you want to look at charging speeds or battery endurance metrics for our current lineup.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">80<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#10 &middot; Xiaomi &mdash; Seeking Alternative</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 25/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/smartphone/comments/1y0qhdj/opinions_on_xiaomi_phones/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is looking for smartphone recommendations under a specific budget after switching from iPhone to Xiaomi.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; High-refresh-rate AMOLED displays</span><span class="pill pill-teal">&#10003; FlashCharge fast charging technology</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span><span class="pill pill-teal">&#10003; Optical image stabilization camera systems</span><span class="pill pill-teal">&#10003; 5G connectivity across device tiers</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-10', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-10" class="draft-text">Transitioning from iOS to Android in the mid-to-high budget tier gives you access to much faster refresh rates and much quicker charging speeds. Full disclosure: I work on iQOO, where our devices in that segment feature Qualcomm and MediaTek processors, high-refresh-rate AMOLED displays, and FlashCharge fast charging technology. If you are shopping around ₹60K, prioritizing a solid cooling system alongside optical image stabilization on the camera can help bridge the gap coming from an iPhone.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-10', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-10" class="draft-text">Switching from an iPhone means you&#x27;ll likely want a display and charging setup that matches or exceeds what you are leaving behind; our devices offer high-refresh-rate AMOLED displays and FlashCharge fast charging technology. I can help walk you through what models fit cleanly into a ₹60K budget with strong processor and camera specs.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">80<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#11 &middot; Xiaomi &mdash; Seeking Alternative</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/XiaomiGlobal) &middot;
+                      u/Winter-koko-4103 &middot;
+                      Solvability 40/50 &middot; Urgency 20/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/XiaomiGlobal/comments/1y1uhiq/i_need_advice_from_real_users_and_their/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User wants to replace a Google Pixel 10 Pro with a smaller screen alternative featuring high power and better battery.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; High-refresh-rate AMOLED displays</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/XiaomiGlobal): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-11', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-11" class="draft-text">When switching from a Pixel for better battery life while keeping high performance, look closely at how efficiently the processor handles power under load rather than just nominal battery specs. High-refresh-rate AMOLED panels also impact standby drain significantly depending on panel calibration. Full disclosure: I work on iQOO, where we build performance-focused smartphones featuring Qualcomm and MediaTek processors paired with high-capacity batteries up to 6000mAh.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-11', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-11" class="draft-text">Since you are moving away from a Pixel 10 Pro to get better battery endurance without losing raw horsepower, our models combine high-capacity batteries up to 6000mAh with flagship Qualcomm and MediaTek processors. Let me know if you want a direct breakdown of how our current thermal and battery efficiencies compare for your daily usage.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">80<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#12 &middot; OnePlus &mdash; Gaming Performance</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/Smartphones) &middot;
+                      u/DailyDoofuss &middot;
+                      Solvability 45/50 &middot; Urgency 15/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/Smartphones/comments/1y1un3n/oneplus_15_or_oppo_find_x9_pro/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is looking for a phone that handles heavy gaming (Genshin/WuWa) with high fluidity.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; High-refresh-rate AMOLED displays</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/Smartphones): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-12', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-12" class="draft-text">For heavy titles like Genshin Impact or WuWa, sustained frame rates depend heavily on thermal throttling thresholds rather than just touch sampling rates. Ensuring the device has robust thermal dissipation prevents mid-session stutters during longer combat sequences. Disclosure: I&#x27;m with iQOO, where our performance lineup integrates advanced cooling systems for gaming performance alongside high-refresh-rate AMOLED displays and flagship processors.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-12', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-12" class="draft-text">If you want consistent fluidity during heavy gaming sessions like WuWa without dealing with thermal slowdowns, our devices utilize advanced cooling systems for gaming performance coupled with flagship processors. I&#x27;d be happy to share thermal benchmark details or help you evaluate how our hardware handles sustained loads.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">80<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#13 &middot; Poco &mdash; Battery Degradation</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/PocoX6Pro) &middot;
+                      u/muhib80 &middot;
+                      Solvability 45/50 &middot; Urgency 15/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/PocoX6Pro/comments/1y1i29q/its_been_27_years_and_1400_cycle_counts/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User&#x27;s current phone battery is degraded and they are considering a replacement.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; FlashCharge fast charging technology</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/PocoX6Pro): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-13', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-13" class="draft-text">Dropping to 65% health after 1400+ cycles is actually expected for daily heavy use, and debloating definitely helps squeeze out extra screen-on time in the interim. When you eventually upgrade, look for models that support rapid replenishment tech to minimize downtime. Full disclosure: I work on iQOO, where our devices feature high-capacity batteries up to 6000mAh and FlashCharge fast charging technology.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-13', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-13" class="draft-text">Since you are planning your next upgrade path following severe battery degradation on your current device, our upcoming or current lineup features high-capacity batteries up to 6000mAh paired with FlashCharge fast charging technology to cut down charging times. Let me know if you want a spec comparison for your replacement shortlist.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">79<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#14 &middot; Poco &mdash; Pricing And Performance</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 24/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/PocoPhones/comments/1xqw1s2/help_me_to_choose_urgent/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User complains that the Poco X8 Pro is a gaming phone whose battery and camera do not justify its price.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; FlashCharge fast charging technology</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span><span class="pill pill-teal">&#10003; Optical image stabilization camera systems</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-14', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-14" class="draft-text">Balancing thermal performance with a reliable camera system and solid battery life is a common pain point in the performance-phone segment. Many devices focused purely on raw processing end up compromising on optics and endurance. Full disclosure: I work on iQOO, where we build performance-focused devices equipped with high-capacity batteries up to 6000mAh, advanced cooling systems, and optical image stabilization camera systems.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-14', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-14" class="draft-text">If you are looking for an alternative that avoids the battery and camera compromises typical of pure gaming phones, our lineup features optical image stabilization camera systems alongside advanced cooling and high-capacity batteries up to 6000mAh. Happy to share direct specifications or camera samples if you are looking to pivot away from your current choice.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">77<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#15 &middot; Xiaomi &mdash; Hardware Upgrade</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 22/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/PickAnAndroidForMe/comments/1xzwkyq/upgrading_from_xiaomi_redmi_note_9/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is upgrading from an old Redmi phone due to battery issues and dropped software support, looking for alternatives.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; High-refresh-rate AMOLED displays</span><span class="pill pill-teal">&#10003; FlashCharge fast charging technology</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span><span class="pill pill-teal">&#10003; Optical image stabilization camera systems</span><span class="pill pill-teal">&#10003; 5G connectivity across device tiers</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-15', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-15" class="draft-text">Stepping up from an older Redmi after software support drops is a massive leap in daily fluidity, especially regarding modem efficiency and display responsiveness. At the 600-euro mark, you want to ensure you get modern connectivity and reliable hardware longevity. Disclosure: I&#x27;m with iQOO, where our devices deliver 5G connectivity across device tiers, high-refresh-rate AMOLED displays, and reliable FlashCharge capabilities.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-15', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-15" class="draft-text">Moving from a Redmi Note 9 up to a modern mid-to-high tier device will give you a massive upgrade in battery longevity and processing speed. Our models in that general tier feature high-refresh-rate AMOLED displays, 5G connectivity across device tiers, and FlashCharge fast charging technology. Let me know if you want help mapping out options within your 600-euro budget.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">75<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#16 &middot; OnePlus &mdash; Battery Degradation</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 20/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/Smartphones/comments/1xyv3w6/is_oneplus_still_a_good_choice_in_this_current/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is experiencing battery degradation on their current phone and evaluating OnePlus as a choice.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; High-capacity batteries up to 6000mAh</span><span class="pill pill-teal">&#10003; FlashCharge fast charging technology</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-16', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-16" class="draft-text">Battery degradation on compact devices like the Pixel 7a usually happens due to heavy thermal cycles in a smaller chassis. If you want to bypass replacement hassles, look at devices packing high-capacity batteries up to 6000mAh paired with FlashCharge fast charging technology to cut down time tethered to a wall. Full disclosure: I work on iQOO Smartphones, where we focus heavily on these performance and endurance metrics.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-16', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-16" class="draft-text">Hey! Since you are moving away from a Pixel due to battery life, our iQOO devices feature high-capacity batteries up to 6000mAh and FlashCharge fast charging technology to keep you powered through heavy usage days without degradation worries. Let me know if you want a quick spec breakdown comparing options for your daily workflow.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">75<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#17 &middot; Huawei &mdash; Device Replacement</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/phones) &middot;
+                      u/blanket_account &middot;
+                      Solvability 40/50 &middot; Urgency 15/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/phones/comments/1y1s5g3/switching_from_my_huawei_p30_pro_what_is/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User needs a new phone to replace an aging Huawei due to app compatibility issues.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; High-refresh-rate AMOLED displays</span><span class="pill pill-teal">&#10003; 5G connectivity across device tiers</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/phones): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-17', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-17" class="draft-text">Moving away from older Huawei hardware requires looking closely at modern app support and standard Android frameworks without heavy restrictions. You will want to target modern Qualcomm Snapdragon and MediaTek Dimensity processors alongside high-refresh-rate AMOLED displays and 5G connectivity across device tiers to ensure modern banking apps run smoothly. Disclosure: I&#x27;m part of the team at iQOO Smartphones.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-17', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-17" class="draft-text">Hi there! Transitioning from the P30 Pro means you need full access to standard Google Mobile Services and modern app ecosystems. Our current lineup utilizes Qualcomm Snapdragon and MediaTek Dimensity processors, high-refresh-rate AMOLED displays, and 5G connectivity across device tiers to ensure complete compatibility. Happy to walk through which models match your exact daily app requirements.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">70<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#18 &middot; OnePlus &mdash; Pricing Jump</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 40/50 &middot; Urgency 20/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/oneplus/comments/1xqr2mq/what_is_this_atrocious_pricing/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is complaining about high pricing for flagship smartphones.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Qualcomm Snapdragon and MediaTek Dimensity processors</span><span class="pill pill-teal">&#10003; High-refresh-rate AMOLED displays</span><span class="pill pill-teal">&#10003; Advanced cooling systems for gaming performance</span><span class="pill pill-teal">&#10003; 5G connectivity across device tiers</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-18', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-18" class="draft-text">Flagship pricing in INR has definitely crept up significantly across several brands, often pushing past reasonable hardware value metrics. When evaluating alternatives in that price bracket, look for devices utilizing Qualcomm Snapdragon and MediaTek Dimensity processors, high-refresh-rate AMOLED displays, advanced cooling systems for gaming performance, and 5G connectivity across device tiers to keep costs grounded. Full disclosure: I work on iQOO Smartphones.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-18', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-18" class="draft-text">Hey! If you are tired of inflated flagship price tags in the INR market, it is worth looking at performance-first builds. We leverage Qualcomm Snapdragon and MediaTek Dimensity processors, high-refresh-rate AMOLED displays, advanced cooling systems for gaming performance, and 5G connectivity across device tiers without the massive markup. Let me know if you want a direct spec-to-price comparison.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">70<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#19 &middot; OnePlus &mdash; Camera Performance</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 15/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/oneplus/comments/1xtfv9x/oneplus_16_smartphone_review_a_newgeneration/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is comparing flagship phones and seeking better camera performance.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Optical image stabilization camera systems</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-19', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-19" class="draft-text">When comparing camera tiers across current generation flagships, optical image stabilization is non-negotiable for low-light stability and reducing handshake blur. Checking the specific module specs for optical image stabilization camera systems will help you determine if the camera hardware justifies the premium. Full disclosure: I work on iQOO Smartphones.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-19', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-19" class="draft-text">Hi! If camera reliability and stabilization are top priorities for your next upgrade, checking out hardware implementations makes all the difference. Our devices integrate optical image stabilization camera systems designed to handle jittery shots effectively. Let me know if you want to look at sample camera specs and sensor details.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+    <h2>Warm / SEO Market Signals (5)</h2>
+    <section class="card"><div class="table-wrap"><table><thead><tr><th>Score</th><th>Source</th><th>Competitor</th><th>Pain / Signal</th><th>Link</th></tr></thead><tbody>
+            <tr>
+              <td><span class="pill pill-purple">68/100</span></td>
+              <td>google_serp / reddit.com</td>
+              <td><strong>OnePlus</strong></td>
+              <td>User is experiencing sudden battery drain issues on a OnePlus device.</td>
+              <td><a href="https://www.reddit.com/r/TheOnePlus15/comments/1y0kfbq/issues_with_oneplus_15/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">63/100</span></td>
+              <td>hacker_news / Hacker News</td>
+              <td><strong>OnePlus</strong></td>
+              <td>User is looking for a phone with better power and battery life than current ARM64 options.</td>
+              <td><a href="https://news.ycombinator.com/item?id=50538752" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">60/100</span></td>
+              <td>google_serp / reddit.com</td>
+              <td><strong>Xiaomi</strong></td>
+              <td>User warns others to think twice before investing in Xiaomi smartphones due to general dissatisfaction.</td>
+              <td><a href="https://www.reddit.com/r/XiaomiIndiaOfficial/comments/1xrb2po/planning_to_buy_a_xiaomi_smartphone_think_twice/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">60/100</span></td>
+              <td>reddit / r/PWM_Sensitive</td>
+              <td><strong>OnePlus</strong></td>
+              <td>User is looking for a smartphone with screen comfort features to mitigate PWM sensitivity.</td>
+              <td><a href="https://www.reddit.com/r/PWM_Sensitive/comments/1y1vbyt/oneplus_nord_6_user_experiences/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">53/100</span></td>
+              <td>google_serp / reddit.com</td>
+              <td><strong>OnePlus</strong></td>
+              <td>User is experiencing software issues and frustration with current device OS.</td>
+              <td><a href="https://www.reddit.com/r/oneplus/comments/1xxxg90/coloros_android_issues/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            </tbody></table></div></section>
+
+    <section class="card">
+      <details>
+        <summary>Solvability Hard-Gate Quality Proof (29 Rejected False Positives &mdash; $0 Lead Charge)</summary>
+        <p class="muted" style="margin: 10px 0;">Every item below failed factual solvability against the Verified Capabilities Ledger and was discarded before drafting or billing.</p>
+        <div class="table-wrap"><table><thead><tr><th>Source</th><th>Post</th><th>Gate Verdict</th><th>Why Rejected ($0 Lead Charge)</th></tr></thead><tbody>
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Google is pushing OEMs against GrapheneOS and bootloader unlocking</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Not a purchase intent or product pain; discussion of OS modification.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Why get an expensive Pi when I have an old phone?</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>User is repurposing hardware, not seeking a new device.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Hyper-Realistic Sand with WebGL2</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>User is expressing satisfaction, not pain.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>PixelOS</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Discussion of software support, not hardware purchase intent.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Software companies are trying to kill home computing?</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>General market commentary, no specific pain or purchase intent.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>The Secret ThinkPad Powerbutton Code to Bring Dead Laptops Back to Life (2007)</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>User is troubleshooting an old device, not actively seeking a new purchase.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Nvidia is preparing to oust Jensen Huang</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Off-topic political discussion.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>PixelOS</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Preference discussion, not an active search for a new device.</td>
+            </tr>
+            </tbody></table></div>
+      </details>
+    </section>
+
+    <section class="card">
+      <details>
+        <summary>Stage 1 Grounding Anchor: Verified Capabilities Ledger (7 Facts)</summary>
+        <ul class="ledger-list"><li>High-capacity batteries up to 6000mAh</li><li>Qualcomm Snapdragon and MediaTek Dimensity processors</li><li>High-refresh-rate AMOLED displays</li><li>FlashCharge fast charging technology</li><li>Advanced cooling systems for gaming performance</li><li>Optical image stabilization camera systems</li><li>5G connectivity across device tiers</li></ul>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <strong>Compliance &amp; Privacy Notice:</strong> This Actor never auto-posts to Reddit, Hacker News, Bluesky, or review platforms and never scrapes private/logged-in personal data. Always review drafts before posting and ensure GDPR/local privacy compliance if you enrich any public handle later.
+    </footer>
+  </div>
+
+  <script>
+    window.__REPORT_META__ = {"product": "iQOO Smartphones", "hotLeads": 19, "warmSignals": 5, "generatedAt": "2026-11-21 16:21 UTC"};
+    function copyText(elementId, btn) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      const text = el.innerText || el.textContent || "";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          const orig = btn.innerText;
+          btn.innerText = "Copied!";
+          setTimeout(() => { btn.innerText = orig; }, 1600);
+        });
+      }
+    }
+  </script>
+</body>
+</html>

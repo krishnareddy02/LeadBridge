@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/Ubiquiti/comments/1glziwx/alternative_to_uaccadapterpoeusbc_to_make_a_g4/",
+  "author": "unknown",
+  "content": "Alternative to UACC-Adapter-PoE-USBC to make a G4 Instant PoE? (i.e. avoid $90 in adapters for a $99 camera)\nHi there, I have a couple of G4 instant cameras and I'd like the option of making one of them PoE capable.\n\nI made the mistake of ordering the \"POE to USB-C adapter\" from Ubiquiti not realizing it was just a $19 (+ shipping + tax) usb-c to usb-c cable.  \n\nIt looks like I also need \"UACC-Adapter-PoE-USBC\" which is another $65 shipped -- basically meaning you need $90 in adapters just to have the option for a $99 camera to be PoE with data.\n\nAre there any alternatives to this?   \n\nP.S.  Here's the cable that's labeled as \"PoE to USB-C\" but has no PoE capability itself (my older eyes missed the asterick):  [https://store.ui.com/us/en/collections/camera-poe-to-usb-c-cables/products/uacc-g4-ins-cable-usb-4-5m?variant=uacc-g4-ins-cable-usb-45m](https://store.ui.com/us/en/collections/camera-poe-to-usb-c-cables/products/uacc-g4-ins-cable-usb-4-5m?variant=uacc-g4-ins-cable-usb-45m)",
+  "timestamp": "2024-11-07T19:58:46.000Z",
+  "competitor_mentioned": "Instantly"
+}

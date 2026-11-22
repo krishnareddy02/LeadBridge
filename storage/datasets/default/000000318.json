@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/selfhosted/comments/1wue9jj/flyhedwig_a_free_and_opensource_alternative_to/",
+  "author": "unknown",
+  "content": "flyhedwig, a free and open-source alternative to Instantly!\nHey! \nI created flyhedwig, an open source alternative to tools like Instantly or Smartlead, which charge huge amounts of money per lead for basic cold email campaign management.\n\n The emails are sent from your inbox, and you get open rates and analytics for your campaign. It also comes with an MCP server, so you can manage the whole campaign from Claude or Codex.\n\n It also has multi email option, so you can spread the senders through various emails as you like, and many other things like classification of replies or automatic draft reply generation. \n\nIf you like the project, you can sign up and use the hosted version and if you star the Github project it would help it grow! Let me know what you think :)",
+  "timestamp": "2026-09-30T19:25:44.000Z",
+  "competitor_mentioned": "Instantly"
+}

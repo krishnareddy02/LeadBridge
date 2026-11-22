@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complaint-to-Revenue Executive Brief &mdash; Heroku</title>
+  <style>
+    :root {
+      --bg: #f8f7f4;
+      --surface: #ffffff;
+      --ink: #1e1b2e;
+      --muted: #5c586e;
+      --border: #e6e2ee;
+      --purple: #3b1d6c;
+      --teal: #0f766e;
+      --teal-soft: #e6f6f4;
+      --coral: #e05a47;
+      --coral-soft: #fdecea;
+      --amber: #b45309;
+      --amber-soft: #fef3c7;
+      --purple-soft: #efe9fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 28px 20px 56px; }
+    .hero {
+      background: linear-gradient(135deg, var(--purple) 0%, #241046 100%);
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+    .hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+    .hero h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: -0.02em; }
+    .hero p { margin: 0; color: rgba(255,255,255,0.82); font-size: 14px; }
+    .badge-live {
+      background: rgba(15, 118, 110, 0.25);
+      border: 1px solid rgba(94, 234, 212, 0.45);
+      color: #99f6e4;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .kpi {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .kpi-num { font-size: 28px; font-weight: 800; color: var(--purple); line-height: 1.1; }
+    .kpi-num.teal { color: var(--teal); }
+    .kpi-num.coral { color: var(--coral); }
+    .kpi-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-top: 4px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(30, 27, 46, 0.04);
+    }
+    h2 { font-size: 19px; margin: 28px 0 12px; color: var(--purple); }
+    .sub-h { font-size: 14px; margin: 0 0 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+    .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; }
+    .bar-label { width: 150px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bar-track { flex: 1; height: 10px; background: #eeeaf5; border-radius: 999px; overflow: hidden; }
+    .bar-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--purple)); border-radius: 999px; }
+    .bar-val { width: 24px; text-align: right; font-weight: 700; color: var(--purple); }
+    .pill-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .pill-teal { background: var(--teal-soft); color: var(--teal); }
+    .pill-coral { background: var(--coral-soft); color: var(--coral); }
+    .pill-amber { background: var(--amber-soft); color: var(--amber); }
+    .pill-purple { background: var(--purple-soft); color: var(--purple); }
+    .pill-neutral { background: #f1eff6; color: var(--ink); }
+    .lead-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
+    .lead-meta { display: flex; align-items: center; gap: 14px; }
+    .score-badge {
+      background: var(--purple);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      padding: 8px 12px;
+      border-radius: 10px;
+      min-width: 78px;
+      text-align: center;
+    }
+    .score-badge span { font-size: 12px; font-weight: 500; opacity: 0.78; }
+    .lead-title { font-size: 16px; font-weight: 700; color: var(--ink); }
+    .lead-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .btn-link {
+      text-decoration: none;
+      background: var(--purple-soft);
+      color: var(--purple);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 7px 13px;
+      border-radius: 8px;
+    }
+    .btn-link:hover { background: #e3d7f7; }
+    .pain-summary { margin: 10px 0 14px; font-size: 14px; }
+    .section-mini { margin-bottom: 14px; }
+    .mini-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 700; margin-bottom: 6px; }
+    .safety-box {
+      background: var(--amber-soft);
+      border-left: 4px solid var(--amber);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #78350f;
+      margin-bottom: 16px;
+    }
+    .drafts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+    .draft-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fbfafc;
+      padding: 12px 14px;
+    }
+    .draft-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; gap: 8px; }
+    .draft-label { font-size: 12px; font-weight: 700; color: var(--purple); }
+    .copy-btn {
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 11px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .copy-btn:hover { background: #0c5f59; }
+    .draft-text {
+      margin: 0;
+      white-space: pre-wrap;
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--ink);
+    }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: #f4f1fa; color: var(--purple); font-size: 12px; text-transform: uppercase; }
+    details summary { cursor: pointer; font-weight: 700; color: var(--purple); }
+    .ledger-list { margin: 10px 0 0; padding-left: 20px; font-size: 13px; color: var(--muted); }
+    .muted { color: var(--muted); font-size: 13px; }
+    .footer {
+      margin-top: 32px;
+      padding: 16px 20px;
+      border-radius: 10px;
+      background: #f1eff6;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="hero-top">
+        <div>
+          <h1>Heroku &mdash; Competitor Churn &amp; Outreach Brief</h1>
+          <p>Fully Managed Cloud PaaS &middot; Lookback: 14 days &middot; Min Hot Score: 70/100 &middot; Generated 2026-11-21 11:16 UTC</p>
+        </div>
+        <span class="badge-live">Human-in-the-Loop Safe</span>
+      </div>
+    </header>
+
+    <section class="kpi-grid">
+      <div class="kpi"><div class="kpi-num">33</div><div class="kpi-label">Harvested (Stage 2)</div></div>
+      <div class="kpi"><div class="kpi-num">6</div><div class="kpi-label">Filtered Free (Stage 3)</div></div>
+      <div class="kpi"><div class="kpi-num teal">5</div><div class="kpi-label">Hot Leads Drafted</div></div>
+      <div class="kpi"><div class="kpi-num">2</div><div class="kpi-label">Warm / SEO Signals</div></div>
+      <div class="kpi"><div class="kpi-num coral">20</div><div class="kpi-label">Noise Rejected ($0)</div></div>
+    </section>
+
+    <section class="card">
+      <div class="mini-label">Source Harvest Telemetry</div>
+      <div class="pill-wrap" style="margin-bottom: 16px;"><span class="pill pill-neutral">hacker_news: <strong>11</strong> (ok)</span><span class="pill pill-neutral">bluesky: <strong>4</strong> (partial)</span><span class="pill pill-neutral">google_serp: <strong>12</strong> (ok)</span><span class="pill pill-neutral">reddit: <strong>6</strong> (ok)</span></div>
+      
+    <div class="grid-2">
+      <div>
+        <h3 class="sub-h">Complaints by Competitor</h3>
+        
+            <div class="bar-row">
+              <div class="bar-label">Render</div>
+              <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+              <div class="bar-val">5</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Fly.io</div>
+              <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+              <div class="bar-val">1</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Vercel</div>
+              <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+              <div class="bar-val">1</div>
+            </div>
+            
+      </div>
+      <div>
+        <h3 class="sub-h">Top Pain Themes</h3>
+        <div class="pill-wrap"><span class="pill pill-amber">Ram Cpu Limits <strong>(1)</strong></span><span class="pill pill-amber">Pricing Jump <strong>(1)</strong></span><span class="pill pill-amber">Reliability Outage <strong>(1)</strong></span><span class="pill pill-amber">Spin Down Latency <strong>(1)</strong></span><span class="pill pill-amber">Complex Devops <strong>(1)</strong></span><span class="pill pill-amber">Backend Infrastructure <strong>(1)</strong></span></div>
+      </div>
+    </div>
+    
+    </section>
+
+    <h2>Actionable Hot Leads (5)</h2>
+    
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">81<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#1 &middot; Render &mdash; Ram Cpu Limits</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/Btechtards) &middot;
+                      u/quantumflux_2789 &middot;
+                      Solvability 35/50 &middot; Urgency 26/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/Btechtards/comments/1y1tpe0/deployment_doubt/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User complains that Render&#x27;s 512MB RAM tier is too slow for video processing and asks for alternatives.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Instant application scaling up or out</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/Btechtards): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-1', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-1" class="draft-text">Video processing is notoriously heavy on memory, so hitting a 512MB RAM bottleneck will definitely grind things to a halt. When you outgrow lower memory limits, you typically want a platform that lets you instantly scale your dynos up to handle the memory overhead without restructuring your setup. Full disclosure: I work on Heroku, where you can instantly scale your app up or out when workloads get heavy.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-1', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-1" class="draft-text">Hey! Since your video processing workflow is struggling with memory limits, scaling up your app instantly can give it the RAM it needs. We can take a quick look at your setup and see how Heroku handles that transition if you&#x27;d like a walkthrough.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">77<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#2 &middot; Render &mdash; Pricing Jump</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 22/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/Hostinger/comments/1xr96o3/need_advice_choosing_a_hosting_plan_for_my/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is looking for node.js hosting and deployment advice while finding Render paid hosting relatively expensive.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Deploy Python, Node.js, Go, and Ruby apps via Git push with zero DevOps setup</span><span class="pill pill-teal">&#10003; Eco dyno pricing starting at $5 per month</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-2', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-2" class="draft-text">Node.js app deployment can definitely feel tedious when configuring servers manually or dealing with expensive tiers. If you just want to get your code online quickly, look for platforms that support direct Git push deployments without forcing you to build out a custom DevOps pipeline. Full disclosure: I&#x27;m building Heroku, where you can deploy Node.js apps via simple Git pushes with zero DevOps setup, with eco dyno pricing starting at $5 per month.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-2', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-2" class="draft-text">Hey there! I saw you were looking for straightforward Node.js hosting options that don&#x27;t break the bank. With Heroku, you can push via Git with zero DevOps overhead, and our eco dyno plans start at $5/month. Happy to show you how quick the initial setup is if you&#x27;re interested.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">75<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#3 &middot; Fly.io &mdash; Reliability Outage</div>
+                    <div class="lead-sub">
+                      <strong>HACKER_NEWS</strong> (Hacker News) &middot;
+                      smashandgrab &middot;
+                      Solvability 40/50 &middot; Urgency 18/30 &middot; Recency 17/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://news.ycombinator.com/item?id=50547303" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User complains about Fly.io reliability issues and disappearing assets.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Deploy Python, Node.js, Go, and Ruby apps via Git push with zero DevOps setup</span><span class="pill pill-teal">&#10003; Fully managed PostgreSQL database service (Heroku Postgres)</span><span class="pill pill-teal">&#10003; Instant application scaling up or out</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Hacker News: High sensitivity to marketing speak. Stay technical and candid, explicitly disclose your affiliation, and acknowledge real tradeoffs.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-3', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-3" class="draft-text">Losing assets or dealing with unexpected infrastructure quirks is super frustrating when you just want a reliable production environment. Prioritizing stable hosting with predictable deployments and fully managed data layers usually saves a lot of headaches down the road. Full disclosure: I&#x27;m building Heroku, where we focus on zero DevOps Git deployments, fully managed PostgreSQL, and instant scaling to keep things running smoothly.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-3', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-3" class="draft-text">Hey! Reliability and predictable asset handling are definitely make-or-break for production apps. Heroku handles Git-based deployments paired with fully managed PostgreSQL and instant scaling to keep things stable. Let me know if you want a quick run-through of how we manage reliability.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">73<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#4 &middot; Render &mdash; Spin Down Latency</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 35/50 &middot; Urgency 28/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/webhosting/comments/1xu8p47/looking_for_a_free_alternative_to_render_that/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is looking for a free or low-cost alternative to Render that doesn&#x27;t spin down after inactivity.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Deploy Python, Node.js, Go, and Ruby apps via Git push with zero DevOps setup</span><span class="pill pill-teal">&#10003; Eco dyno pricing starting at $5 per month</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-4', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-4" class="draft-text">Inactivity spin-downs can be a major pain for testing and smaller projects that need to stay responsive. When evaluating low-cost hosting, checking the base tier specifications and deployment workflows can help you avoid unexpected latency. Full disclosure: I&#x27;m building Heroku, where you can deploy Node.js, Python, Go, and Ruby apps via Git push with zero DevOps setup, with eco dyno pricing starting at $5 per month.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-4', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-4" class="draft-text">Hey! Dealing with cold starts and inactivity timeouts is definitely annoying for small web apps. Heroku offers simple Git-push deployments with eco dyno pricing starting at $5 per month if you want a reliable low-cost alternative. Let me know if you want help mapping out your deployment configuration.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">70<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#5 &middot; Render &mdash; Complex Devops</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 15/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/SaaS/comments/1xslzxt/saas_infrastructure_recommendations/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is asking for SaaS infrastructure recommendations for managed PaaS options.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Deploy Python, Node.js, Go, and Ruby apps via Git push with zero DevOps setup</span><span class="pill pill-teal">&#10003; Fully managed PostgreSQL database service (Heroku Postgres)</span><span class="pill pill-teal">&#10003; Fully managed Redis key-value store</span><span class="pill pill-teal">&#10003; Instant application scaling up or out</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-5', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-5" class="draft-text">Evaluating managed PaaS options usually comes down to how much infrastructure overhead you want to offload versus maintaining custom container configurations. Look for platforms that abstract away the server management so you can focus entirely on writing your application code. Full disclosure: I&#x27;m building Heroku, which provides fully managed infrastructure including zero DevOps Git deployments for multiple languages, managed Postgres and Redis, and instant scaling.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-5', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-5" class="draft-text">Hey! If you&#x27;re exploring managed SaaS infrastructure and PaaS options, Heroku handles everything from zero-setup Git deployments to fully managed databases and instant scaling. I&#x27;d be happy to share a quick migration checklist if you&#x27;re comparing different architectures.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+    <h2>Warm / SEO Market Signals (2)</h2>
+    <section class="card"><div class="table-wrap"><table><thead><tr><th>Score</th><th>Source</th><th>Competitor</th><th>Pain / Signal</th><th>Link</th></tr></thead><tbody>
+            <tr>
+              <td><span class="pill pill-purple">68/100</span></td>
+              <td>google_serp / reddit.com</td>
+              <td><strong>Render</strong></td>
+              <td>User is looking for backend hosting alternatives once an app needs a real server or backend.</td>
+              <td><a href="https://www.reddit.com/r/lowcode/comments/1xwa0kr/lovable_alternatives_once_the_app_needs_a_real/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">65/100</span></td>
+              <td>google_serp / reddit.com</td>
+              <td><strong>Vercel</strong></td>
+              <td>User is comparing Vercel and Render for a Next.js app with Postgres.</td>
+              <td><a href="https://www.reddit.com/r/indianstartups/comments/1xrmfkz/vercel_or_render_for_a_nextjs_app_with_postgres/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            </tbody></table></div></section>
+
+    <section class="card">
+      <details>
+        <summary>Solvability Hard-Gate Quality Proof (20 Rejected False Positives &mdash; $0 Lead Charge)</summary>
+        <p class="muted" style="margin: 10px 0;">Every item below failed factual solvability against the Verified Capabilities Ledger and was discarded before drafting or billing.</p>
+        <div class="table-wrap"><table><thead><tr><th>Source</th><th>Post</th><th>Gate Verdict</th><th>Why Rejected ($0 Lead Charge)</th></tr></thead><tbody>
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Talos Linux</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>General exploratory question without direct pain or seeking alternative.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Well, That Wasn&#x27;t Fun: October 16 &#x27;26</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Apology post, no pain or alternative seeking.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>rVPN – stealth VPN with end-to-end encryption</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Technical discussion/anecdote, not user pain.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Well, That Wasn&#x27;t Fun: October 16 &#x27;26</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Moderator guideline notice.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Ask HN: What are you working on? (November 2026)</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Self-promotion / Show HN type post.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Ask HN: What are you working on? (November 2026)</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Side project description, no product pain.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Goodbye Claude, hello Pi</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Casual mention, positive/neutral experience.</td>
+            </tr>
+            
+            <tr>
+              <td>hacker_news / Hacker News</td>
+              <td>Show HN: Minimal and self-hosted website monitoring</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Show HN self-promotion post.</td>
+            </tr>
+            </tbody></table></div>
+      </details>
+    </section>
+
+    <section class="card">
+      <details>
+        <summary>Stage 1 Grounding Anchor: Verified Capabilities Ledger (8 Facts)</summary>
+        <ul class="ledger-list"><li>Deploy Python, Node.js, Go, and Ruby apps via Git push with zero DevOps setup</li><li>Fully managed PostgreSQL database service (Heroku Postgres)</li><li>Fully managed Redis key-value store</li><li>Instant application scaling up or out</li><li>Automated GitHub integration with disposable Review Apps for pull requests</li><li>Continuous delivery workflows through Heroku Flow</li><li>Eco dyno pricing starting at $5 per month</li><li>150+ third-party add-ons and 380+ open source buildpacks ecosystem</li></ul>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <strong>Compliance &amp; Privacy Notice:</strong> This Actor never auto-posts to Reddit, Hacker News, Bluesky, or review platforms and never scrapes private/logged-in personal data. Always review drafts before posting and ensure GDPR/local privacy compliance if you enrich any public handle later.
+    </footer>
+  </div>
+
+  <script>
+    window.__REPORT_META__ = {"product": "Heroku", "hotLeads": 5, "warmSignals": 2, "generatedAt": "2026-11-21 11:16 UTC"};
+    function copyText(elementId, btn) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      const text = el.innerText || el.textContent || "";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          const orig = btn.innerText;
+          btn.innerText = "Copied!";
+          setTimeout(() => { btn.innerText = orig; }, 1600);
+        });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complaint-to-Revenue Executive Brief &mdash; Nike Shoes</title>
+  <style>
+    :root {
+      --bg: #f8f7f4;
+      --surface: #ffffff;
+      --ink: #1e1b2e;
+      --muted: #5c586e;
+      --border: #e6e2ee;
+      --purple: #3b1d6c;
+      --teal: #0f766e;
+      --teal-soft: #e6f6f4;
+      --coral: #e05a47;
+      --coral-soft: #fdecea;
+      --amber: #b45309;
+      --amber-soft: #fef3c7;
+      --purple-soft: #efe9fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 28px 20px 56px; }
+    .hero {
+      background: linear-gradient(135deg, var(--purple) 0%, #241046 100%);
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+    .hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+    .hero h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: -0.02em; }
+    .hero p { margin: 0; color: rgba(255,255,255,0.82); font-size: 14px; }
+    .badge-live {
+      background: rgba(15, 118, 110, 0.25);
+      border: 1px solid rgba(94, 234, 212, 0.45);
+      color: #99f6e4;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .kpi {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .kpi-num { font-size: 28px; font-weight: 800; color: var(--purple); line-height: 1.1; }
+    .kpi-num.teal { color: var(--teal); }
+    .kpi-num.coral { color: var(--coral); }
+    .kpi-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-top: 4px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(30, 27, 46, 0.04);
+    }
+    h2 { font-size: 19px; margin: 28px 0 12px; color: var(--purple); }
+    .sub-h { font-size: 14px; margin: 0 0 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+    .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 13px; }
+    .bar-label { width: 150px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bar-track { flex: 1; height: 10px; background: #eeeaf5; border-radius: 999px; overflow: hidden; }
+    .bar-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--purple)); border-radius: 999px; }
+    .bar-val { width: 24px; text-align: right; font-weight: 700; color: var(--purple); }
+    .pill-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .pill-teal { background: var(--teal-soft); color: var(--teal); }
+    .pill-coral { background: var(--coral-soft); color: var(--coral); }
+    .pill-amber { background: var(--amber-soft); color: var(--amber); }
+    .pill-purple { background: var(--purple-soft); color: var(--purple); }
+    .pill-neutral { background: #f1eff6; color: var(--ink); }
+    .lead-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
+    .lead-meta { display: flex; align-items: center; gap: 14px; }
+    .score-badge {
+      background: var(--purple);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      padding: 8px 12px;
+      border-radius: 10px;
+      min-width: 78px;
+      text-align: center;
+    }
+    .score-badge span { font-size: 12px; font-weight: 500; opacity: 0.78; }
+    .lead-title { font-size: 16px; font-weight: 700; color: var(--ink); }
+    .lead-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .btn-link {
+      text-decoration: none;
+      background: var(--purple-soft);
+      color: var(--purple);
+      font-weight: 600;
+      font-size: 13px;
+      padding: 7px 13px;
+      border-radius: 8px;
+    }
+    .btn-link:hover { background: #e3d7f7; }
+    .pain-summary { margin: 10px 0 14px; font-size: 14px; }
+    .section-mini { margin-bottom: 14px; }
+    .mini-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 700; margin-bottom: 6px; }
+    .safety-box {
+      background: var(--amber-soft);
+      border-left: 4px solid var(--amber);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #78350f;
+      margin-bottom: 16px;
+    }
+    .drafts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+    .draft-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fbfafc;
+      padding: 12px 14px;
+    }
+    .draft-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; gap: 8px; }
+    .draft-label { font-size: 12px; font-weight: 700; color: var(--purple); }
+    .copy-btn {
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 11px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .copy-btn:hover { background: #0c5f59; }
+    .draft-text {
+      margin: 0;
+      white-space: pre-wrap;
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--ink);
+    }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: #f4f1fa; color: var(--purple); font-size: 12px; text-transform: uppercase; }
+    details summary { cursor: pointer; font-weight: 700; color: var(--purple); }
+    .ledger-list { margin: 10px 0 0; padding-left: 20px; font-size: 13px; color: var(--muted); }
+    .muted { color: var(--muted); font-size: 13px; }
+    .footer {
+      margin-top: 32px;
+      padding: 16px 20px;
+      border-radius: 10px;
+      background: #f1eff6;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="hero-top">
+        <div>
+          <h1>Nike Shoes &mdash; Competitor Churn &amp; Outreach Brief</h1>
+          <p>Athletic Footwear &middot; Lookback: 14 days &middot; Min Hot Score: 70/100 &middot; Generated 2026-11-21 11:41 UTC</p>
+        </div>
+        <span class="badge-live">Human-in-the-Loop Safe</span>
+      </div>
+    </header>
+
+    <section class="kpi-grid">
+      <div class="kpi"><div class="kpi-num">71</div><div class="kpi-label">Harvested (Stage 2)</div></div>
+      <div class="kpi"><div class="kpi-num">26</div><div class="kpi-label">Filtered Free (Stage 3)</div></div>
+      <div class="kpi"><div class="kpi-num teal">7</div><div class="kpi-label">Hot Leads Drafted</div></div>
+      <div class="kpi"><div class="kpi-num">8</div><div class="kpi-label">Warm / SEO Signals</div></div>
+      <div class="kpi"><div class="kpi-num coral">30</div><div class="kpi-label">Noise Rejected ($0)</div></div>
+    </section>
+
+    <section class="card">
+      <div class="mini-label">Source Harvest Telemetry</div>
+      <div class="pill-wrap" style="margin-bottom: 16px;"><span class="pill pill-neutral">hacker_news: <strong>0</strong> (ok)</span><span class="pill pill-neutral">bluesky: <strong>2</strong> (partial)</span><span class="pill pill-neutral">google_serp: <strong>23</strong> (ok)</span><span class="pill pill-neutral">reddit: <strong>46</strong> (ok)</span></div>
+      
+    <div class="grid-2">
+      <div>
+        <h3 class="sub-h">Complaints by Competitor</h3>
+        
+            <div class="bar-row">
+              <div class="bar-label">Adidas</div>
+              <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+              <div class="bar-val">6</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">New Balance</div>
+              <div class="bar-track"><div class="bar-fill" style="width:66%"></div></div>
+              <div class="bar-val">4</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Puma</div>
+              <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+              <div class="bar-val">3</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Adidas/Puma</div>
+              <div class="bar-track"><div class="bar-fill" style="width:16%"></div></div>
+              <div class="bar-val">1</div>
+            </div>
+            
+            <div class="bar-row">
+              <div class="bar-label">Under Armour</div>
+              <div class="bar-track"><div class="bar-fill" style="width:16%"></div></div>
+              <div class="bar-val">1</div>
+            </div>
+            
+      </div>
+      <div>
+        <h3 class="sub-h">Top Pain Themes</h3>
+        <div class="pill-wrap"><span class="pill pill-amber">Durability Cost <strong>(1)</strong></span><span class="pill pill-amber">Recommendation Seeking <strong>(1)</strong></span><span class="pill pill-amber">Seeking Alternative <strong>(1)</strong></span><span class="pill pill-amber">Shipping Quality Issue <strong>(1)</strong></span><span class="pill pill-amber">Sizing Fit Needs <strong>(1)</strong></span><span class="pill pill-amber">Sizing Uncertainty <strong>(1)</strong></span></div>
+      </div>
+    </div>
+    
+    </section>
+
+    <h2>Actionable Hot Leads (7)</h2>
+    
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">82<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#1 &middot; New Balance &mdash; Durability Cost</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 27/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/widefeet/comments/1xrvgas/looking_for_a_non_new_balance_walking_shoe_more/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User complains about poor durability and high cost of New Balance walking shoes and seeks an alternative.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Supplies sports-specific footwear for basketball, football, running, and gym use</span><span class="pill pill-teal">&#10003; Emphasizes durability and product quality across all lines</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-1', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-1" class="draft-text">When looking at longevity, checking the outer sole rubber compound density and midsole compression set can help prevent premature breakdown. Full disclosure: I work on Nike. We focus heavily on engineering durability across all our athletic lines to prevent rapid wear.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-1', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-1" class="draft-text">Since you mentioned durability issues, our running and gym lines are built with reinforced materials to withstand high-mileage wear. Let me know if you want a direct link to check out our durable training options.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">82<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#2 &middot; Adidas/Puma &mdash; Recommendation Seeking</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/AskRunningShoeGeeks) &middot;
+                      u/ninoy666 &middot;
+                      Solvability 45/50 &middot; Urgency 20/30 &middot; Recency 17/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/AskRunningShoeGeeks/comments/1y0y19c/evo_sl_or_evo_sl_woven_or_puma_deviate_pure_nitro/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is looking for running shoe recommendations to help return to a 5K fitness level.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Offers performance shoes with Nike Air cushioning technology</span><span class="pill pill-teal">&#10003; Supplies sports-specific footwear for basketball, football, running, and gym use</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/AskRunningShoeGeeks): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-2', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-2" class="draft-text">Getting back into a 5K routine is all about low-impact consistency and protecting your joints as your cardiovascular endurance rebuilds. Disclosure: I&#x27;m with Nike. We supply running shoes equipped with Nike Air cushioning technology to absorb impact during distance training.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-2', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-2" class="draft-text">Getting back to a 30-minute 5K is a solid goal, and having the right cushioning makes a big difference on your joints. We offer running shoes with Nike Air cushioning technology that could help smooth out your transition back into jogging.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">81<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#3 &middot; Under Armour &mdash; Seeking Alternative</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 26/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/malefashionadvice/comments/1xrvfe5/alternative_to_under_armour_slides/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is actively looking for an alternative to Under Armour slides.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Supplies sports-specific footwear for basketball, football, running, and gym use</span><span class="pill pill-teal">&#10003; Offers a wide range of iconic collections (Air Force 1, Dunk, Jordan, etc.)</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-3', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-3" class="draft-text">For casual footwear alternatives, looking at molded foam density can help you find something that retains its structure longer. Full disclosure: I work on Nike. We offer a wide range of iconic collections like Air Force 1, Dunk, and Jordan alongside sports-specific footwear.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-3', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-3" class="draft-text">If you are exploring alternatives outside of Under Armour, our lineup includes casual icons like Air Force 1 and Dunk alongside performance gear. I can share some details on our standard collections if you are looking for a reliable swap.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">80<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#4 &middot; Puma &mdash; Shipping Quality Issue</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 25/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/amazonindia/comments/1xsel45/ordered_puma_nitro_shoes_got_a_broken_sparks_and/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User received damaged/incorrect items and is frustrated with the purchase experience.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Sells through official website, retail stores, mobile apps, and authorized partners</span><span class="pill pill-teal">&#10003; Provides sizing accuracy and return policies for online purchases</span><span class="pill pill-teal">&#10003; Delivers products with fast shipping and reliable delivery experience</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-4', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-4" class="draft-text">Dealing with damaged or incorrect online orders is deeply frustrating, especially when dealing with third-party fulfillment errors. Disclosure: I&#x27;m with Nike. We sell directly through official channels and maintain strict sizing accuracy and return policies for online purchases.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-4', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-4" class="draft-text">If you want a smoother online purchasing experience with reliable delivery and clear return policies, our official web store and app handle fulfillment directly. Let me know if you want help navigating sizing or checking out our current stock.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">75<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#5 &middot; New Balance &mdash; Sizing Fit Needs</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/AskRunningShoeGeeks) &middot;
+                      u/joker713 &middot;
+                      Solvability 35/50 &middot; Urgency 20/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/AskRunningShoeGeeks/comments/1y1ftwn/wide_shoe_recs/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User needs wide-fit (4E) running shoes for high-mileage training.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Offers performance shoes with Nike Air cushioning technology</span><span class="pill pill-teal">&#10003; Supplies sports-specific footwear for basketball, football, running, and gym use</span><span class="pill pill-teal">&#10003; Provides sizing accuracy and return policies for online purchases</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/AskRunningShoeGeeks): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-5', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-5" class="draft-text">At 208 lbs building up to a 50k, impact management and proper lockdown are critical to prevent midfoot fatigue. Full disclosure: I work on Nike. We supply sports-specific running shoes featuring Nike Air cushioning and reliable online sizing policies.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-5', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-5" class="draft-text">Handling high-mileage trail and road training at your current weight requires solid impact absorption. We offer running shoes with Nike Air cushioning technology and robust online sizing and return policies to ensure proper fit.</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">75<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#6 &middot; Adidas &mdash; Sizing Uncertainty</div>
+                    <div class="lead-sub">
+                      <strong>REDDIT</strong> (r/PUMA) &middot;
+                      u/Regular_Run_1753 &middot;
+                      Solvability 40/50 &middot; Urgency 15/30 &middot; Recency 20/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/PUMA/comments/1y1shd1/trying_to_switch_from_adidas_to_puma/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is switching brands and needs help with sizing conversion.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Provides sizing accuracy and return policies for online purchases</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (r/PUMA): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-6', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-6" class="draft-text">When switching between brands with foot measurements around 26.2cm, relying on centimeter charts is usually safer than matching EU sizes since conversion formulas vary significantly per brand. Full disclosure: I work on Nike Shoes, but for your specific case, checking the brand&#x27;s precise online sizing charts and verifying their return policies gives you the safest fallback if the fit is slightly off. Measuring your feet later in the day when they are slightly swollen also helps prevent getting a pair that is too tight during matches.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-6', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-6" class="draft-text">Since you are navigating tricky size conversions between brands, our online purchase system provides detailed sizing accuracy guidance along with clear return policies just in case the fit needs adjusting. Would a quick look at our sizing guide or a step-by-step fit check be helpful for your switch?</pre>
+                </div>
+              </div>
+            </article>
+            
+
+            <article class="card lead-card">
+              <div class="lead-header">
+                <div class="lead-meta">
+                  <span class="score-badge">70<span>/100</span></span>
+                  <div>
+                    <div class="lead-title">#7 &middot; Adidas &mdash; Performance Mismatch</div>
+                    <div class="lead-sub">
+                      <strong>GOOGLE_SERP</strong> (reddit.com) &middot;
+                      public_web &middot;
+                      Solvability 45/50 &middot; Urgency 15/30 &middot; Recency 10/20
+                    </div>
+                  </div>
+                </div>
+                <a class="btn-link" href="https://www.reddit.com/r/runningshoes/comments/1xvcz73/adidas_hyperboost_edge_worth_it/" target="_blank" rel="noopener noreferrer">
+                  Open Original Post &#8599;
+                </a>
+              </div>
+
+              <p class="pain-summary"><strong>Customer Pain:</strong> User is dissatisfied with Adidas shoes feeling like athleisure rather than performance running shoes.</p>
+
+              <div class="section-mini">
+                <div class="mini-label">Verified Capability Evidence (Zero-Hallucination Grounding)</div>
+                <div class="pill-wrap"><span class="pill pill-teal">&#10003; Offers performance shoes with Nike Air cushioning technology</span><span class="pill pill-teal">&#10003; Supplies sports-specific footwear for basketball, football, running, and gym use</span></div>
+              </div>
+
+              <div class="safety-box">
+                <strong>Platform Anti-Ban Guidance:</strong> Reddit (Reddit): Strict anti-self-promo community. Lead with helpful advice, disclose affiliation clearly, and omit raw promo links unless OP asks for them.
+              </div>
+
+              <div class="drafts-grid">
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft A &mdash; Value-First Public Reply</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-a-7', this)">Copy Draft A</button>
+                  </div>
+                  <pre id="draft-a-7" class="draft-text">It is definitely frustrating when running shoes lean too heavily into lifestyle aesthetics and compromise on technical lockdown and upper support. Full disclosure: I work on Nike Shoes, where we focus heavily on sports-specific footwear for running, gym, football, and basketball usage. If you want true performance rather than athleisure, look for models utilizing dedicated technical uppers paired with responsive cushioning setups rather than lifestyle foam iterations.</pre>
+                </div>
+
+                <div class="draft-box">
+                  <div class="draft-top">
+                    <span class="draft-label">Draft B &mdash; Direct / DM Follow-Up</span>
+                    <button class="copy-btn" type="button" onclick="copyText('draft-b-7', this)">Copy Draft B</button>
+                  </div>
+                  <pre id="draft-b-7" class="draft-text">Since you are looking for true performance running shoes rather than athleisure options, our catalog supplies sports-specific footwear tailored specifically for running with dedicated Nike Air cushioning technology. Would you like a quick overview of performance running models built for technical support?</pre>
+                </div>
+              </div>
+            </article>
+            
+
+    <h2>Warm / SEO Market Signals (8)</h2>
+    <section class="card"><div class="table-wrap"><table><thead><tr><th>Score</th><th>Source</th><th>Competitor</th><th>Pain / Signal</th><th>Link</th></tr></thead><tbody>
+            <tr>
+              <td><span class="pill pill-purple">68/100</span></td>
+              <td>google_serp / reddit.com</td>
+              <td><strong>Puma</strong></td>
+              <td>User is experiencing foot pain and looking for comfortable alternatives to their previous shoes.</td>
+              <td><a href="https://www.reddit.com/r/adidas/comments/1xzoea8/these_are_ridiculous/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">65/100</span></td>
+              <td>google_serp / reddit.com</td>
+              <td><strong>Adidas</strong></td>
+              <td>User reports Adidas golf shoes falling apart and is seeking alternatives.</td>
+              <td><a href="https://www.reddit.com/r/golf/comments/1xue1qc/golf_shoes/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">65/100</span></td>
+              <td>reddit / r/Newbalance</td>
+              <td><strong>New Balance</strong></td>
+              <td>User is frustrated with current New Balance pricing and is looking for alternatives.</td>
+              <td><a href="https://www.reddit.com/r/Newbalance/comments/1y1uprb/new_deliveries_today/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">65/100</span></td>
+              <td>reddit / r/adidas</td>
+              <td><strong>Adidas</strong></td>
+              <td>User is seeking advice on pricing discrepancies and quality for daily casual/jogging shoes.</td>
+              <td><a href="https://www.reddit.com/r/adidas/comments/1y1pcjn/need_suggestions_for_daily_casual_wear_and/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">60/100</span></td>
+              <td>google_serp / reddit.com</td>
+              <td><strong>Adidas</strong></td>
+              <td>User is looking for casual pink sneakers and is considering Adidas.</td>
+              <td><a href="https://www.reddit.com/r/AusFemaleFashion/comments/1xzz0wy/adidas_sneakers_all_the_different_types_help/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">55/100</span></td>
+              <td>reddit / r/pakistanrunning</td>
+              <td><strong>Adidas</strong></td>
+              <td>User needs wider shoes due to fallen arches and is dissatisfied with current pair.</td>
+              <td><a href="https://www.reddit.com/r/pakistanrunning/comments/1y1di6n/adizero_evo_sl_new/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">49/100</span></td>
+              <td>google_serp / Bluesky (via SERP)</td>
+              <td><strong>New Balance</strong></td>
+              <td>User is frustrated by the lack of specific wide/large sizing availability.</td>
+              <td><a href="https://bsky.app/profile/ryannorth.ca/post/3n2a4sybwzs2d" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            
+            <tr>
+              <td><span class="pill pill-purple">40/100</span></td>
+              <td>reddit / r/PHRunners</td>
+              <td><strong>Puma</strong></td>
+              <td>User is evaluating whether to keep or sell a pair of running shoes.</td>
+              <td><a href="https://www.reddit.com/r/PHRunners/comments/1y17hka/puma_x_hyrox_deviate_nitro_3/" target="_blank" rel="noopener noreferrer">View &#8599;</a></td>
+            </tr>
+            </tbody></table></div></section>
+
+    <section class="card">
+      <details>
+        <summary>Solvability Hard-Gate Quality Proof (30 Rejected False Positives &mdash; $0 Lead Charge)</summary>
+        <p class="muted" style="margin: 10px 0;">Every item below failed factual solvability against the Verified Capabilities Ledger and was discarded before drafting or billing.</p>
+        <div class="table-wrap"><table><thead><tr><th>Source</th><th>Post</th><th>Gate Verdict</th><th>Why Rejected ($0 Lead Charge)</th></tr></thead><tbody>
+            <tr>
+              <td>google_serp / reddit.com</td>
+              <td>V7 - Issues / Advice : r/Newbalance</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>General discussion thread without clear pain or purchasing intent.</td>
+            </tr>
+            
+            <tr>
+              <td>google_serp / reddit.com</td>
+              <td>Under Armour Outlet Sale - ENDS TODAY</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Promotional advertisement/sale announcement, not a customer pain point.</td>
+            </tr>
+            
+            <tr>
+              <td>google_serp / reddit.com</td>
+              <td>Air Jordan 1 or New Balance 990? : r/ThisorThatPH</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>General social media comparison thread rather than active pain or request for alternative.</td>
+            </tr>
+            
+            <tr>
+              <td>google_serp / reddit.com</td>
+              <td>Exclusive: Ben Shelton is leaving On for New Balance</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Sponsorship news article, not a user seeking a product alternative.</td>
+            </tr>
+            
+            <tr>
+              <td>google_serp / reddit.com</td>
+              <td>Are there any NEW balance changes ? : r/bindingofisaac</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Off-topic video game discussion sharing a keyword coincidence.</td>
+            </tr>
+            
+            <tr>
+              <td>google_serp / reddit.com</td>
+              <td>New Balance partnership : r/Mavericks</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>General pricing commentary without active purchase request or alternative seeking.</td>
+            </tr>
+            
+            <tr>
+              <td>google_serp / reddit.com</td>
+              <td>Are the shape/width of extra wide new balance trainers ...</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Technical discussion about lacing adjustments rather than footwear replacement search.</td>
+            </tr>
+            
+            <tr>
+              <td>google_serp / trustpilot.com</td>
+              <td>Adidas Womens Supernova Rise 2 Running Shoes - Navy</td>
+              <td><span class="pill pill-coral">Rejected (0/100)</span></td>
+              <td>Standard retail product listing page without a consumer complaint.</td>
+            </tr>
+            </tbody></table></div>
+      </details>
+    </section>
+
+    <section class="card">
+      <details>
+        <summary>Stage 1 Grounding Anchor: Verified Capabilities Ledger (8 Facts)</summary>
+        <ul class="ledger-list"><li>Offers performance shoes with Nike Air cushioning technology</li><li>Provides lifestyle sneakers featuring Air Max and React materials</li><li>Supplies sports-specific footwear for basketball, football, running, and gym use</li><li>Sells through official website, retail stores, mobile apps, and authorized partners</li><li>Provides sizing accuracy and return policies for online purchases</li><li>Delivers products with fast shipping and reliable delivery experience</li><li>Offers a wide range of iconic collections (Air Force 1, Dunk, Jordan, etc.)</li><li>Emphasizes durability and product quality across all lines</li></ul>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <strong>Compliance &amp; Privacy Notice:</strong> This Actor never auto-posts to Reddit, Hacker News, Bluesky, or review platforms and never scrapes private/logged-in personal data. Always review drafts before posting and ensure GDPR/local privacy compliance if you enrich any public handle later.
+    </footer>
+  </div>
+
+  <script>
+    window.__REPORT_META__ = {"product": "Nike Shoes", "hotLeads": 7, "warmSignals": 8, "generatedAt": "2026-11-21 11:41 UTC"};
+    function copyText(elementId, btn) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      const text = el.innerText || el.textContent || "";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          const orig = btn.innerText;
+          btn.innerText = "Copied!";
+          setTimeout(() => { btn.innerText = orig; }, 1600);
+        });
+      }
+    }
+  </script>
+</body>
+</html>

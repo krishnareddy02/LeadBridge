@@ -1,0 +1,87 @@
+{
+  "product_category": "Enterprise Collaboration and Project Management Suite",
+  "target_audience": "Software engineering teams, IT departments, product managers, and enterprise organizations",
+  "verified_capabilities": [
+    "Jira for project management, issue tracking, and agile Scrum and Kanban boards",
+    "Confluence for documentation and knowledge management",
+    "Bitbucket for Git repository hosting and code collaboration",
+    "Jira Service Management for IT service management and customer support",
+    "Trello for visual project management",
+    "Loom for asynchronous video communication",
+    "Rovo for AI-powered enterprise search, chat, and AI agents",
+    "Teamwork Graph connecting knowledge, people, decisions, and relationships"
+  ],
+  "pain_points_solved": [
+    "Complicated interfaces across disparate tools",
+    "Scattered tools and fragmented team context",
+    "Siloed communication between engineering, IT, and business teams",
+    "Manual and slow software delivery workflows",
+    "Difficulty managing enterprise-scale projects and portfolios"
+  ],
+  "competitors": [
+    "Asana",
+    "Monday.com",
+    "Linear",
+    "GitHub",
+    "ServiceNow",
+    "Notion"
+  ],
+  "competitor_pain_queries": [
+    "Asana pricing increase",
+    "switching from Monday.com",
+    "Linear alternative for enterprises",
+    "ServiceNow complex setup",
+    "Notion wiki limitations"
+  ],
+  "category_problem_queries": [
+    "enterprise project management software",
+    "team collaboration platform for developers",
+    "agile workflow and issue tracking tool"
+  ],
+  "g2_product_slugs": [
+    "asana",
+    "monday-com",
+    "linear",
+    "github",
+    "servicenow",
+    "notion"
+  ],
+  "domain_context_terms": [
+    "collaboration",
+    "tickets",
+    "issues",
+    "sprints",
+    "roadmap",
+    "repository",
+    "workspace",
+    "workflow"
+  ],
+  "product_name": "Atlassian",
+  "product_url": "https://www.atlassian.com",
+  "root_domain": "atlassian.com",
+  "exclude_terms": [
+    "Atlassian",
+    "atlassian.com",
+    "coupon",
+    "promo code",
+    "discount code",
+    "black friday",
+    "cyber monday",
+    "affiliate",
+    "we are hiring",
+    "job opening",
+    "for sale",
+    "referral link"
+  ],
+  "llm_provider_used": "gemini:gemini-3.5-flash-lite",
+  "crawl_diagnostics": {
+    "crawl_method": "httpx_direct",
+    "urls_fetched": [
+      "https://www.atlassian.com",
+      "https://www.atlassian.com/collections/product"
+    ],
+    "http_status": 200,
+    "extracted_char_count": 4500,
+    "warning": null
+  }
+}

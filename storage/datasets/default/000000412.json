@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/SaaSMarketing/comments/1onzs3h/reply_agent_for_instantly_and_smartleads/",
+  "author": "unknown",
+  "content": "Reply agent for Instantly and Smartleads\nI’ve been exploring a problem that almost every cold email marketing agency faces: managing inboxes, replying to leads, and keeping up with follow-ups.\nRight now, many agencies use tools like Instantly or Smartleads, but they still rely on human inbox managers to handle replies - especially when it comes to responding to positive leads and doing proper follow-ups.\n So here’s the MVP idea I’m testing \n Reply Agent for Cold Email Agencies\n* Replaces human inbox managers for Instantly & Smartleads\n* Responds automatically to positive replies (personalized, relevant, and natural)\n* Follows up if there’s no response after a positive reply\n* Can CC other teammates or founders when needed\n\nPost-MVP vision: If a lead doesn’t reply after 3 follow-ups, the agent starts tracking their LinkedIn activity for the next 6-12 months - using the content they engage with as signals for when (and how) to re-approach them.\nBasically, it would handle reply management and long-term nurture - until the campaign’s objective is met.\n\nMy question to agency founders:\n1. Would this solve a real pain point for you?\n2. Considering Instantly already has a reply agent, would you still see value in a version that includes follow-ups + LinkedIn re-engagement?\n3. What would you realistically be willing to pay for such a system (monthly or per inbox)?",
+  "timestamp": "2025-11-04T05:58:23.000Z",
+  "competitor_mentioned": "Instantly"
+}

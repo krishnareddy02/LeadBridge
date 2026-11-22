@@ -1,0 +1,77 @@
+{
+  "title": "Complaint-to-Revenue Agent Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "productName": {
+      "title": "Product Name",
+      "type": "string",
+      "description": "Your product or brand name (automatically excluded from competitor complaint results).",
+      "editor": "textfield",
+      "example": "InvoiceSpark"
+    },
+    "productUrl": {
+      "title": "Product Website URL",
+      "type": "string",
+      "description": "Public homepage URL crawled to extract factual verified capabilities.",
+      "editor": "textfield",
+      "example": "https://invoicespark.io"
+    },
+    "productDescription": {
+      "title": "Product Description & Core Advantages",
+      "type": "string",
+      "description": "Describe what your product does, pricing model, and top differentiators.",
+      "editor": "textarea",
+      "example": "Flat $15/mo invoicing for freelancers and small agencies. Unlimited clients, automated overdue payment reminders, 0% markup on Stripe/Wise/UPI, 1-click FreshBooks/QuickBooks CSV import."
+    },
+    "competitors": {
+      "title": "Known Competitors (Optional)",
+      "type": "array",
+      "description": "Leave blank to auto-discover top 4-6 competitors automatically.",
+      "editor": "stringList",
+      "default": []
+    },
+    "sources": {
+      "title": "Complaint Sources",
+      "type": "array",
+      "description": "Select platforms to harvest. Default Lean mode excludes G2 for fast ~40s runs.",
+      "editor": "select",
+      "default": ["google_serp", "reddit", "hacker_news", "bluesky"],
+      "items": {
+        "type": "string",
+        "enum": ["google_serp", "reddit", "hacker_news", "bluesky", "g2"]
+      }
+    },
+    "lookbackDays": {
+      "title": "Lookback Window (Days)",
+      "type": "integer",
+      "description": "Only harvest complaints published within the last N days.",
+      "default": 14,
+      "minimum": 1,
+      "maximum": 90
+    },
+    "minWinabilityScore": {
+      "title": "Minimum Hot-Lead Score (0-100)",
+      "type": "integer",
+      "description": "Complaints scoring at or above this threshold receive dual outreach drafts.",
+      "default": 70,
+      "minimum": 40,
+      "maximum": 95
+    },
+    "tone": {
+      "title": "Outreach Tone",
+      "type": "string",
+      "enum": ["helpful_technical", "founder_candid", "executive_concise"],
+      "default": "founder_candid",
+      "editor": "select"
+    },
+    "llmApiKey": {
+      "title": "Optional BYOK Gemini API Key",
+      "type": "string",
+      "description": "Optional: provide your own Google AI Studio key for high-volume commercial runs.",
+      "editor": "textfield",
+      "isSecret": true
+    }
+  },
+  "required": ["productName", "productUrl", "productDescription"]
+}

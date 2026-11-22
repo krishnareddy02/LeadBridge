@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/PleX/comments/1kl2z2i/matching_movies_instantly_fails/",
+  "author": "unknown",
+  "content": "Matching movies instantly fails\nHello Everyone!\n\nI'm a bit of a Plex newbie, but i'm really happy with my progress so far, matching, posters, metadata etc. has all been working great, but after recently re-sorting all my files on a new hard drive, I've run into an issue:\n\n1. When trying to match any movie, I immediately get the \"no matches were found using this agent\" error\n2. The console doesn't show any errors: \"Completed: \\[192.168.XX.XX:54547\\] 200 GET /library/metadata/24/matches?manual=1&title=examplemovie&agent=tv.plex.agents.movie&year=2025&language=en-US (8 live) #12b4 TLS GZIP 6ms 614 bytes (pipelined: 3)\"\n\nI'm on MacOS, running on a Macbook Pro with a Windscribe VPN, and everything was working fine until I re-sorted all the files!\n\nWhat I've tried:\n\n* Tested all other agents (they all have the same issue)\n* Deleted all app data & cache, re-installed PMS\n* Changed DNS server\n* Performed the \"plex dance\" (emptied folder, re-analyzed, re-populated folder)\n* Added all my local IPs to the list of addresses and networks allowed without auth (192.168.0/24)\n\nThanks in advance for any help!",
+  "timestamp": "2025-05-12T20:24:30.000Z",
+  "competitor_mentioned": "Instantly"
+}

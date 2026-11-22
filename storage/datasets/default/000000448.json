@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/selfhosted/comments/14vfam5/selfhosted_alternative_to_telegram_voip_instant/",
+  "author": "unknown",
+  "content": "Self-hosted alternative to Telegram - VOIP + instant messaging\nHello fellow hosters and home-labbers,\n\nI've been using Telegram lately as one of my primary methods of communicating with friends and I'm finally getting fed up with poor performance - primarily dropped calls, not to mentions concerns about privacy. Looking to host something that has both VOIP and instant messaging functionality.\n\nLooking for a modern solution with a back end that I can host and then ideally an app that's already available on app stores that I can easily distribute to my friends. Does a solution like this exist or am I daydreaming?",
+  "timestamp": "2023-07-10T00:55:53.000Z",
+  "competitor_mentioned": "Instantly"
+}

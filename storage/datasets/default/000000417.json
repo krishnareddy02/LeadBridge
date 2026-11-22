@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/androiddev/comments/ixdftx/do_instant_apps_through_the_web_still_work/",
+  "author": "unknown",
+  "content": "Do Instant Apps through the web still work ?\nHey I am working on a small instant app project for my company and cannot seem to see any websites that link to an instant app. For eg If I go to the play store page for vimeo, it shows up a \"Try Now\" button next to install, but searching on chrome, vimeo links take me to the website and not the instant app.\n\nI also have the settings enabled for allowing to upgrade web links. Does this features still exist or are instant apps limited to the try now button on play store ?",
+  "timestamp": "2020-09-22T01:00:04.000Z",
+  "competitor_mentioned": "Instantly"
+}

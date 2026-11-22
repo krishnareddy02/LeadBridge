@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/LegacyJailbreak/comments/1x6frh1/coolbooter_iphone_4s_instantly_fails_activation/",
+  "author": "unknown",
+  "content": "CoolBooter iphone 4s instantly fails activation on ios 7.0.4\nHello everyone, I’m having trouble activating iOS 7.0.4 on my iPhone 4s using CoolBooter 1.6-release.  \nMy setup is a  iPhone 4s (GSM) and Main Os: IOS 9.3.6, fully activated through the normal set up process.  My problem is iOS 7.0.4 boots past the Apple logo and reaches the activation screen, but when I try to activate it, I immediately get this error “ Could not activate iPhone, the activation server cannot be reached.” \n\nWi-Fi works, and tapping Try Again immediately produces the same error. The secondary installation has never successfully passed activation. \n\nMy main iOS 9.3.6 installation works normally, and the phone has an IMEI. I’ve also checked /var/root/Library/Lockdown on the host OS using Filza, and the folder contains escrow\\_records, pair\\_records, and data\\_ark.plist.\n\nDoes anyone know how to get iOS 7.0.4 activated under CoolBooter? Is this a known issue with iOS 7.0.4, and is there a verified fix? I’d prefer not to reinstall the secondary OS unless necessary.  \nThanks!",
+  "timestamp": "2026-10-15T08:02:28.000Z",
+  "competitor_mentioned": "Instantly"
+}

@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/revancedapp/comments/1rykb7a/compiled_classes6dexwarn_could_not_decode_attr/",
+  "author": "unknown",
+  "content": "Compiled classes6.dex/[WARN]: Could not decode attr value, have tried enabling more memory but that makes it instantly fail. Logs inside.\nFirst case: Compiling using all default settings. Runs through Patching, gets to Saving and gets stuck at \"Compiled classes6.dex\" then produces error log - [log](https://sharetext.io/8wcoo1b4)\n\nSecond case: As recommended by mod team, enabled \"Run Patcher in Another Process\" in advanced settings. Patching stage immediately fails - [log](https://sharetext.io/tbled8dl)",
+  "timestamp": "2026-03-20T02:33:24.000Z",
+  "competitor_mentioned": "Instantly"
+}

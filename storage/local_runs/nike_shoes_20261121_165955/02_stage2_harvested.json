@@ -1,0 +1,36 @@
+{
+  "complaints": [
+    {
+      "id": "81c5f99411d579c4",
+      "source": "hacker_news",
+      "sub_source": "Hacker News",
+      "author_handle": "kolchinski",
+      "post_url": "https://news.ycombinator.com/item?id=50568763",
+      "published_at": "2026-11-20T00:51:52Z",
+      "title": "Show HN: Zeus – Claude Code for AI voice agents",
+      "text": "Hi everyone, Alex here - I’m one of the founders of ThunderPhone. We’re excited to announce the launch of Zeus, a platform that makes AI phone calls actually work without extensive hand-tuning! You can see a head-to-head I made of the last version of ThunderPhone vs this one here: https://www.youtube.com/watch?v=YlkIc3L29lo A (somewhat long) summary: When we started building business phone agents in 2024, we kept running into technical problems that ruined calls, caused by the limits of existing architectures. The two biggest issues were that phone agents misheard callers, and disobeyed scripts or responded in weird ways. Both stemmed from the prevailing voice agent architecture - a “three-step” or “cascaded” pipeline: one transcription model turning caller audio into text, one LLM generating a response (and sometimes tool calls) from that text, and a TTS model turning response text into audio. Transcription models aren’t perfect, especially in noisy environments, with unclear callers, in languages other than English, and on short utterances like “yeah”. With the pipeline approach, when caller audio is boiled down to a single “best guess” text transcript, mistakes are often unrecoverable: there’s typically no “top n” best guesses or other audio signal for the LLM to use if the transcript was wrong. That leads the LLM to respond to what the transcription model thought it heard instead of what the caller actually said. The pipeline approach also caused weird responses and poor ",
+      "matched_query": "best performance running shoes",
+      "engagement_score": 3
+    }
+  ],
+  "telemetry": [
+    {
+      "source": "hacker_news",
+      "status": "ok",
+      "items_collected": 1,
+      "fallback_used": true,
+      "error": null
+    },
+    {
+      "source": "bluesky",
+      "status": "skipped",
+      "items_collected": 0,
+      "fallback_used": false,
+      "error": "Bluesky HTTP 403 (public CDN rate/auth block)"
+    }
+  ],
+  "fallback_triggered": true,
+  "pass1_unique_count": 0,
+  "pass2_added_count": 1,
+  "total_unique_count": 1
+}

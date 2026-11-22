@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/learnmachinelearning/comments/1smzrav/why_a_model_can_look_good_on_a_quick_test_and/",
+  "author": "unknown",
+  "content": "Why a model can look good on a quick test and still fail under repeated trials\nWe ran a data-agent benchmark where the quick run looked strong, but the repeated-trial run exposed instability.\n\nObserved pattern:\n\nlow-trial run: looks strong\n\n50 trial run: performance drops sharply\n\nThis is not unusual when the system depends on:\n\nquery routing\n\nschema interpretation\n\nkey normalization\n\nbrittle context selection\n\nThe main lesson for us was that pass@1 on a small sample can hide reliability issues. The more honest number is the one that survives repetition.\n\nQuestion:\n\nWhen you evaluate systems with a lot of hidden branching, do you trust a small trial count at all? Or do you treat repeated runs as the real metric?",
+  "timestamp": "2026-04-16T10:38:24.000Z",
+  "competitor_mentioned": "Instantly"
+}

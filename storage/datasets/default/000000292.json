@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/aiostreams/comments/1v0vfng/is_it_normal_for_selfhosted_aiostreams_nntp_to/",
+  "author": "unknown",
+  "content": "Is it normal for self-hosted AIOStreams NNTP to fail on NZBs that the Torbox UI instantly caches?\nHey everyone,\n\nI've been playing around with the new Usenet features on my updated self-hosted AIOStreams setup, but I'm running into a confusing issue and wanted to see if I'm missing something or if this is just expected behavior.\n\nWhen I try to grab most NZBs through my AIOStreams built-in NNTP setup, they end up failing or getting marked as \"degraded.\" As you can see in the first image, I get errors like *\"Missing on providers: 1/9 files unavailable (incomplete or removed).\"*\n\n![img](5xia1u6jt7eh1)\n\nHowever, if I take those *exact same* NZB files and manually upload them to the Torbox Web UI, they succeed instantly. The second image shows them hitting the cache and immediately changing to *\"Download Ready.\"*\n\n![img](u1zur40ct7eh1)\n\nAm I missing something in my AIOStreams NNTP configuration, or is this just the nature of Torbox having older completed files cached while my local setup is hitting DMCA'd articles? Any insights would be hugely appreciated!",
+  "timestamp": "2026-07-19T16:44:15.000Z",
+  "competitor_mentioned": "Instantly"
+}

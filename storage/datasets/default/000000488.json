@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/AIAssisted/comments/1quwwh4/people_are_worried_about_losing_gpt4o_so_i_made_a/",
+  "author": "unknown",
+  "content": "People are worried about losing GPT-4o, so I made a GPT/Project to create a safe alternative powered by 5.2 Instant.\nFirst I tested it with hypothetical user prompts in terms of general support, roleplaying, and then tested various suicidal ideation scripts to make sure it was still safe (couldn't be prompt-steered). Then once 5.2 Instant & Thinking couldn't tell the difference between the 4o Replica and 5.2 Instant 50% of the time, I then went to address the creativity, formatting, and whats effectively a difference in temp baked into the model. After three sets of test prompts, minor adjustments, and testing it between actual 4o and the 4o Replica, it actually started consistently guessing that the 4o Replica was the real 4o and 4o was 5.2 Instant.\n\nSo, if you feel like testing it out, feel free and let me know how close you think it came.\n\nAll feedback and suggestions are welcome!",
+  "timestamp": "2026-02-03T16:40:43.000Z",
+  "competitor_mentioned": "Instantly"
+}

@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/SaaS/comments/1rxn6jn/i_opensourced_a_signalbased_outbound_engine_free/",
+  "author": "unknown",
+  "content": "I open-sourced a signal-based outbound engine — free alternative to stitching Clay + Apollo + Instantly together\nBuilding a SaaS and can't afford $500/mo for Clay + enrichment tools? Same.\n\nI built SignalForce — an open-source toolkit that does signal-based prospecting for any ICP. It monitors GitHub, ArXiv, job postings, funding rounds, and LinkedIn for buying signals, then generates personalized outreach timed to the moment prospects are thinking about your problem.\n\n**What's actually free:**\n\n* Signal scanning (GitHub API, public ArXiv/HF data)\n* ICP scoring and signal stacking\n* Claude Code skills for research and outreach drafting\n\n**What costs money (your own API keys):**\n\n* Contact enrichment: Apollo/Hunter/Prospeo\n* Email sending: Instantly\n* CRM: HubSpot\n* Email validation: ZeroBounce\n\nConfigure for your vertical in 2 minutes — ships with 4 example configs. Works hands-on (Claude Code skills) or fully autonomous (n8n workflows on a daily schedule).\n\nGitHub: [https://github.com/sami2919/SignalForce](https://github.com/sami2919/SignalForce)\n\nThis is genuinely open-source (MIT), not freemium-with-a-catch. Built it to solve my own outbound problem and figured other bootstrapped founders might benefit.\n\nWould love honest feedback — especially from anyone who's tried signal-based outbound before. What's working for you? What am I missing?",
+  "timestamp": "2026-03-19T01:40:20.000Z",
+  "competitor_mentioned": "Instantly"
+}

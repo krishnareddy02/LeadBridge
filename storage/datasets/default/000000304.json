@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/Coldemailing/comments/1vsbfs3/honest_question_why_pay_for_instantly_when_you/",
+  "author": "unknown",
+  "content": "Honest question: Why pay for Instantly when you can just build a quick script in half a day?\n&#x200B;\n\nI’m looking into cold outreach setups right now and trying to understand why everyone pays monthly subscriptions for tools like Instantly.\n\nWhy not just buy 3 or 4 domains, set up 20–30 inboxes, and write a simple Python/CLI script with AI to send the emails with random time delays? \n\nAm I oversimplifying this, or is there a massive catch I’m missing?\n\nIs the real value just the warmup pool and deliverability management, or are people mostly paying for the convenience of not having to touch a terminal?\n\nWould love to hear from anyone who has actually tried building their own setup vs. paying for a platform. Am I walking into a deliverability trap?",
+  "timestamp": "2026-08-19T03:52:49.000Z",
+  "competitor_mentioned": "Instantly"
+}

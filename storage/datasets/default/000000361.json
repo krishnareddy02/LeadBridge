@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/betatests/comments/1vf66ox/made_a_cheaper_instantly_alternative_for_small/",
+  "author": "unknown",
+  "content": "made a cheaper instantly alternative for small teams, need people to beta test\nHey, small team here. We hit a contact cap on our cold email tool and got tired of like 150 enterprise/ai features we never touch, while the one thing we needed (send to more people) was gated behind a pricing tier.\n\nSo we built our own.\n\nUnlimited lead upload and sends, works with your normal mailbox via IMAP/SMTP, you can write emails by hand or let an AI agent research and draft them. Full autopilot exists but we designed it to work both ways - human-first or ai-first.\n\nAlso built an MCP server so you can manage campaigns (lists, analytic, sending etc) from your AI agent and build automation on top of it.\n\nCurrently we are working on integrations to various DBs with contacts so AI will pull everything you need automatically. It's early and we are looking for 10-15 people who want to try out our app and give us some feedback. If you run outbound for a small company/product and want in free while we fix stuff, comment or dm me\n\nCurious how people here run outbound these days too, feels like it changed a lot this year",
+  "timestamp": "2026-08-04T10:11:50.000Z",
+  "competitor_mentioned": "Instantly"
+}

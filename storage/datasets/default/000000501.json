@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/SideProject/comments/1n780z7/made_a_free_api_drop_zone_paste_any_api_url_hit/",
+  "author": "unknown",
+  "content": "Made a free “API Drop Zone” – paste any API URL, hit send, get results instantly an alternative to postman\nHi everyone,\nI often got tired of opening Postman or writing quick curl commands just to test a single API call. So I built a little side project: apivalidation.com.\n\nhttps://apivalidation.com\n\nIt’s basically a one-page API testing tool:\n\t•\tEnter your API endpoint\n\t•\tPick the method (GET, POST, PUT, DELETE)\n\t•\tInstantly see JSON/text response in the browser\n\nNo downloads, no setup, no signup. Just drop the API and test.\n\nIt’s still early, but I’m planning to add:\n\t•\tAuthentication support\n\t•\tSave/share requests\n\t•\tBulk testing\n\nI’d love to know:\n\t•\tWould this actually save you time vs curl/Postman?\n\t•\tWhat features should I prioritize?\n\t•\tAnything annoying in the current version?\n\nThanks for checking it out 🙌",
+  "timestamp": "2025-09-03T07:07:21.000Z",
+  "competitor_mentioned": "Instantly"
+}

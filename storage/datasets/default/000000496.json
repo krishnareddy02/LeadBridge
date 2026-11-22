@@ -1,0 +1,8 @@
+{
+  "source": "Reddit",
+  "url": "https://www.reddit.com/r/learnprogramming/comments/126gpa1/alternative_to_git_sync_automatically_instantly/",
+  "author": "unknown",
+  "content": "alternative to git , sync automatically instantly with no need for commits and pushes\nhey I code in python from 2 different pcs , it's always a pain to keep commiting and pushing , opening your laptop and realise you forgot to push your last commit and now you have to go back home to work on it again ...  \nis there a solution that my project folder is automatically synced across my 2 pcs so everytime i type anything or add a file or a folder it's synced in both pc ?   \nhopefully there's a free solution to this because i won't need a lot of storage these are small project in size  \nthanks in advance",
+  "timestamp": "2023-03-30T08:33:11.000Z",
+  "competitor_mentioned": "Instantly"
+}

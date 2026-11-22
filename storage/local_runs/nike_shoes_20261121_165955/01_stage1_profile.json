@@ -1,0 +1,80 @@
+{
+  "product_category": "Athletic Footwear and Sportswear",
+  "target_audience": "Athletes, runners, gym enthusiasts, and lifestyle consumers",
+  "verified_capabilities": [
+    "Proprietary cushioning technologies including Air, Air Max, ZoomX, React, and Zoom Air",
+    "Specialized footwear for running, basketball, football, and gym training",
+    "Direct-to-consumer sales via official website and mobile applications",
+    "Extensive product portfolio including Air Force 1, Jordan, and Pegasus collections",
+    "Global retail presence through official stores and authorized partners"
+  ],
+  "pain_points_solved": [
+    "Lack of specialized support for high-impact athletic activities",
+    "Inconsistent comfort during long-distance running or training",
+    "Difficulty finding durable footwear for specific sports performance",
+    "Limited style options for performance-oriented athletic gear",
+    "Unreliable sizing and fit for professional-grade footwear"
+  ],
+  "competitors": [
+    "Adidas",
+    "Puma",
+    "Under Armour",
+    "New Balance",
+    "Asics",
+    "Reebok"
+  ],
+  "competitor_pain_queries": [
+    "Adidas running shoes alternative",
+    "switching from Under Armour",
+    "New Balance sizing issues",
+    "Asics durability complaints",
+    "Puma shoe comfort problems"
+  ],
+  "category_problem_queries": [
+    "best performance running shoes",
+    "durable athletic training footwear",
+    "comfortable sneakers for sports"
+  ],
+  "g2_product_slugs": [
+    "adidas",
+    "puma",
+    "under-armour",
+    "new-balance",
+    "asics",
+    "reebok"
+  ],
+  "domain_context_terms": [
+    "footwear",
+    "sneakers",
+    "cushioning",
+    "athletic",
+    "performance",
+    "running",
+    "training"
+  ],
+  "product_name": "Nike Shoes",
+  "product_url": "https://www.nike.com",
+  "root_domain": "nike.com",
+  "exclude_terms": [
+    "Nike Shoes",
+    "nike.com",
+    "coupon",
+    "promo code",
+    "discount code",
+    "black friday",
+    "cyber monday",
+    "affiliate",
+    "we are hiring",
+    "job opening",
+    "for sale",
+    "referral link"
+  ],
+  "llm_provider_used": "gemini:gemini-3.1-flash-lite",
+  "crawl_diagnostics": {
+    "crawl_method": "description_only_fallback",
+    "urls_fetched": [],
+    "http_status": 403,
+    "extracted_char_count": 0,
+    "warning": "Direct HTTP fetch returned status 403"
+  }
+}
