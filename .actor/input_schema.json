@@ -62,6 +62,7 @@
       "title": "Outreach Tone",
       "type": "string",
       "enum": ["helpful_technical", "founder_candid", "executive_concise"],
+      "description": "Select the tone or style to use when generating the output.",
       "default": "founder_candid",
       "editor": "select"
     },
